@@ -27,4 +27,17 @@ $(function() {
         console.log(link);
         window.location.href=link;
     }
+    /* tabs */
+    $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
+        console.log('showing tab ' + e.target); // Active Tab
+        console.log('e= ', e); // Active Tab
+        var tab_str=String(e.target);
+        if (tab_str.search(/register/) >0 ) {
+            $('.login-title').html('Site register');
+        }else {
+            $('.login-title').html('Site login');
+        };
+
+        //console.log('showing tab ' + e.relatedTarget); // Previous Tab
+    })
 })

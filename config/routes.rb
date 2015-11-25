@@ -5,8 +5,10 @@ PromoRiyad::Application.routes.draw do
   get "pages/terms"
   get "pages/welcome"
   get "pages/landing"
-  devise_for :users, controllers: { omniauth_callbacks: "omniauth_callbacks" }
+
+  ###:path_names => {:sign_in => 'login', :sign_out => 'logout'}
   resources :users
+  devise_for :users, controllers: { omniauth_callbacks: "omniauth_callbacks", sessions: 'users/sessions',registrations: 'users/registrations' }
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

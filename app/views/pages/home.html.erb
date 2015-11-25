@@ -399,40 +399,101 @@
 		<div class="modal fade" id="myLogin" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 			<div class="modal-dialog">
 				<div class="modal-content">
-					<div class="modal-header">
-						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-						<div class="row text-center">
-						   <h3>Site login</h3>
-                          <%= link_to "Sign in with #{'facebook'.to_s.titleize}", omniauth_authorize_path('user', 'facebook') %>
 
-							<!--<button type="button" class="btn btn-primary" onclick="authProvider('facebook')">Facebook</button>-->
-							<!--<button class="btn btn-danger" type="button" onclick="authProvider('google')">Google+</button>-->
-                          <!---->
-						</div>
+                  <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <div class="row text-center">
+                      <h3 class="login-title">Site login</h3>
+                      <%= link_to "Sign in with #{'facebook'.to_s.titleize}", omniauth_authorize_path('user', 'facebook') %>
 
-					</div>
-					<div class="modal-body">
-						<form class="form-signin">
-							<!--<h2 class="form-signin-heading">Please sign in</h2>-->
-							<label class="" for="inputName">Name</label>
-							<input type="text" autofocus="" required="" placeholder="Your name" class="form-control" id="inputName"><br>
-							<label class="" for="inputEmail">Email address</label>
-							<input type="email" autofocus="" required="" placeholder="Email address" class="form-control" id="inputEmail"><br>
-							<label class="" for="inputPassword">Password</label>
-							<input type="password" required="" placeholder="Password" class="form-control" id="inputPassword">
-							<div class="checkbox">
-								<label>
-									<input type="checkbox" value="remember-me"> Remember me
-								</label>
-							</div>
-							<button type="submit" class="btn btn-lg btn-primary btn-block">Login</button>
-						</form>
-					</div>
-					<div class="modal-footer">
-						<!--<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>-->
+                      <!--<button type="button" class="btn btn-primary" onclick="authProvider('facebook')">Facebook</button>-->
+                      <!--<button class="btn btn-danger" type="button" onclick="authProvider('google')">Google+</button>-->
+                      <!---->
+                    </div>
+
+                  </div>
 
 
-					</div>
+                  <!-- Nav tabs -->
+                  <ul class="nav nav-tabs" role="tablist">
+                    <li class="active">
+                      <a href="#login-block" role="tab" data-toggle="tab">
+                        <icon class="fa fa-home"></icon> Login
+                      </a>
+                    </li>
+                    <li><a href="#register-block" role="tab" data-toggle="tab">
+                      <i class="fa fa-user"></i> Register
+                    </a>
+                    </li>
+
+                  </ul>
+
+                  <!-- Tab panes -->
+                  <div class="tab-content">
+                    <div class="tab-pane fade active in" id="login-block">
+
+                      <div class="modal-body">
+                        <form class="form-signin"method="post" action="<%= request.base_url %>/users/sign_up">
+                          <!--<h2 class="form-signin-heading">Please sign in</h2>-->
+                          <label class="" for="inputName">Name</label>
+                          <input type="text" autofocus="" required="" placeholder="Your name" class="form-control" id="inputName"><br>
+                          <label class="" for="inputEmail">Email address</label>
+                          <input type="email" autofocus="" required="" placeholder="Email address" class="form-control" id="inputEmail"><br>
+                          <label class="" for="inputPassword">Password</label>
+                          <input type="password" required="" placeholder="Password" class="form-control" id="inputPassword">
+                          <div class="checkbox">
+                            <label>
+                              <!--<input type="checkbox" value="remember-me"> Remember me-->
+                            </label>
+                          </div>
+                          <button type="submit" class="btn btn-lg btn-primary btn-block">Login</button>
+                        </form>
+                      </div>
+                      <div class="modal-footer">
+                        <!--<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>-->
+                      </div>
+                    </div>
+                    <div class="tab-pane fade" id="register-block">
+                      <div class="modal-body">
+                        <form class="form-register" method="post" action="<%= request.base_url %>/users/register" >
+                          <!--<h2 class="form-signin-heading">Please sign in</h2>-->
+                          <label class="" for="inputNameReg">Name</label>
+                          <input type="text" autofocus="" required="" placeholder="Your name" class="form-control" id="inputNameReg"><br>
+                          <label class="" for="inputEmailReg">Email address</label>
+                          <input type="email" autofocus="" required="" placeholder="Email address" class="form-control" id="inputEmailReg"><br>
+                          <label class="" for="inputPasswordReg">Password</label>
+                          <input type="password" required="" placeholder="Password" class="form-control" id="inputPasswordReg">
+                          <label class="" for="inputLocationReg">Location</label>
+                          <input type="text" autofocus="" required="" placeholder="Your country" class="form-control" id="inputLocationReg"><br>
+                          <label class="" for="inputAboutReg">Description</label>
+                          <input type="text" autofocus="" required="" placeholder="Your short description" class="form-control" id="inputAboutReg"><br>
+                          <div class="checkbox">
+                            <label>
+                              <input type="checkbox" value="remember-me"> Remember me
+                            </label>
+                          </div>
+                          <button type="submit" class="btn btn-lg btn-primary btn-block">Register</button>
+                        </form>
+                      </div>
+                      <div class="modal-footer">
+                        <!--<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>-->
+                      </div>
+                    </div>
+                    </div>
+
+                  </div>
+
+                </div>
+
+
+
+
+
+
+
+
+
+
 				</div>
 			</div>
 		</div>
@@ -445,7 +506,7 @@
 		<div class="modal-content">
 		<div class="modal-header">
 			<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-			<h4 class="modal-title" id="myModalLabel">Site login</h4>
+			<h4 class="modal-title login-title" id="myModalLabel">Site login</h4>
 		</div>
 		<div class="omb_login">
 			<h3 class="omb_authTitle">Login or <a href="#">Sign up</a></h3>
