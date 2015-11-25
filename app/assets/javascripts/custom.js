@@ -21,4 +21,10 @@ $(function() {
         $('#myLogin').modal(options);
 
     })
+    /* Auth */
+    function authProvider(p_name) {
+        var link=window.location.protocol + "//" + window.location.host + "/"+"users/auth/"+p_name;
+        console.log(link);
+        window.location.href=link;
+    }
 })

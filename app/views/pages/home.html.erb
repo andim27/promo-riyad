@@ -49,8 +49,16 @@
 						<li><a href="#pricing">Pricing</a></li>
 						<li><a href="#download">About</a></li>
 						<li><a href="#contact">Contact</a></li>
-						<li><a href="">&nbsp;</a></li>
-						<li><a href="#enter" id="enter">Login/Register</a></li>
+
+                      <ul class="nav navbar-nav navbar-right">
+                        <% if user_signed_in? %>
+                            <li><%= link_to current_user.name, current_user %></li>
+                            <li><%= link_to "Logout", destroy_user_session_path %></li>
+                        <% else %>
+                            <li><a href="#enter" id="enter">Login/Register</a></li>
+                            <!--<li><%= link_to "Sign in", new_user_session_path %></li>-->
+                        <% end %>
+                      </ul>
 					</ul>
 
 				</div>
@@ -61,6 +69,11 @@
 		<section id="home">
 			<div class="overlay">
 				<div class="container">
+                  <div class="row">
+                    <p class="notice"><%= notice %></p>
+                    <p class="alert"><%= alert %></p>
+                  </div>
+
 					<div class="row">
 						<div class="col-md-1"></div>
 						<div class="col-md-10 wow fadeIn" data-wow-delay="0.3s">
@@ -390,8 +403,11 @@
 						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
 						<div class="row text-center">
 						   <h3>Site login</h3>
-							<button type="button" class="btn btn-primary">Facebook</button>
-							<button class="btn btn-danger" type="button">Google+</button>
+                          <%= link_to "Sign in with #{'facebook'.to_s.titleize}", omniauth_authorize_path('user', 'facebook') %>
+
+							<!--<button type="button" class="btn btn-primary" onclick="authProvider('facebook')">Facebook</button>-->
+							<!--<button class="btn btn-danger" type="button" onclick="authProvider('google')">Google+</button>-->
+                          <!---->
 						</div>
 
 					</div>

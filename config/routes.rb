@@ -1,9 +1,24 @@
-Rails.application.routes.draw do
+PromoRiyad::Application.routes.draw do
+
+ ### devise_for :admin_users, ActiveAdmin::Devise.config
+
+  get "pages/terms"
+  get "pages/welcome"
+  get "pages/landing"
+  devise_for :users, controllers: { omniauth_callbacks: "omniauth_callbacks" }
+  resources :users
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  root 'application#index'
+  root :to => 'application#index'
+  ###ActiveAdmin.routes(self)
+  # The priority is based upon order of creation: first created -> highest priority.
+  # See how all your routes lay out with "rake routes".
+
+  # You can have the root of your site routed with "root"
+  # root 'welcome#index'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
