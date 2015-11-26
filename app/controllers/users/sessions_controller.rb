@@ -4,11 +4,13 @@ class Users::SessionsController < Devise::SessionsController
   # GET /resource/sign_in
   def new
      super
+     render :plain=> "You sign in(get)"
   end
 
   # POST /resource/sign_in
   def create
      super
+     render :plain=> "You sign in(post)"
   end
 
   #DELETE /resource/sign_out
