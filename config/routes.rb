@@ -8,7 +8,7 @@ PromoRiyad::Application.routes.draw do
 
   ###:path_names => {:sign_in => 'login', :sign_out => 'logout'}
   resources :users
-  devise_for :users, controllers: { omniauth_callbacks: "omniauth_callbacks", sessions: 'users/sessions',registrations: 'users/users/registrations' },path_names: { sign_in: 'login',  password: 'secret', confirmation: 'verification', unlock: 'unblock', registration: 'users/registrations/create', sign_up: 'cmon_let_me_in' }
+  devise_for :users, controllers: { omniauth_callbacks: "omniauth_callbacks", sessions: 'users/sessions',registrations: 'users/users/registrations' }
   devise_scope :user do
     get "sign_in", to: "users/sessions#new"
     get "register", to: "users/registrations#create"
