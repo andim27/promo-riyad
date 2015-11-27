@@ -1,35 +1,33 @@
-class Users::RegistrationsController < Devise::RegistrationsController
+class RegistrationsController < Devise::RegistrationsController
 before_filter :configure_sign_up_params, only: [:create]
 before_filter :configure_account_update_params, only: [:update]
 
-  # GET /resource/sign_up
+  #GET /resource/sign_up
   def new
      super
-    render :json=>params
   end
 
-  # POST /resource
+  #POST /resource
   def create
      super
-     render :json=>params
   end
 
-  # GET /resource/edit
+  #GET /resource/edit
   def edit
      super
   end
 
-  # PUT /resource
+  #PUT /resource
   def update
      super
   end
 
-  # DELETE /resource
+  #DELETE /resource
   def destroy
      super
   end
 
-  # GET /resource/cancel
+  #GET /resource/cancel
   # Forces the session data which is usually expired after sign
   # in to be expired now. This is useful if the user wants to
   # cancel oauth signing in/up in the middle of the process,
@@ -38,7 +36,7 @@ before_filter :configure_account_update_params, only: [:update]
      super
   end
 
-  # protected
+  protected
 
   # If you have extra params to permit, append them to the sanitizer.
   def configure_sign_up_params

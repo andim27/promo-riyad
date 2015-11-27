@@ -431,7 +431,7 @@
                     <div class="tab-pane fade active in" id="login-block">
 
                       <div class="modal-body">
-                        <form class="form-signin"method="post" action="<%= request.base_url %>/users/sign_up">
+                        <form class="form-signin"method="post" action="<%= request.base_url %>/users/sign_in">
                           <!--<h2 class="form-signin-heading">Please sign in</h2>-->
                           <label class="" for="inputName">Name</label>
                           <input type="text" autofocus="" required="" placeholder="Your name" class="form-control" id="inputName"><br>
@@ -453,7 +453,7 @@
                     </div>
                     <div class="tab-pane fade" id="register-block">
                       <div class="modal-body">
-                        <form class="form-register" method="post" action="<%= request.base_url %>/users/users/registrations/create" >
+                        <form class="form-register" method="post" action="<%= request.base_url %>/users/register" >
                           <!--<h2 class="form-signin-heading">Please sign in</h2>-->
                           <label class="" for="name">Name</label>
                           <input type="text" autofocus="" required="" placeholder="Your name" class="form-control" id="name"><br>

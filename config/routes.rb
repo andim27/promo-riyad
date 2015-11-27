@@ -7,17 +7,20 @@ PromoRiyad::Application.routes.draw do
   get "pages/landing"
 
   ###:path_names => {:sign_in => 'login', :sign_out => 'logout'}
-  resources :users
-  devise_for :users, controllers: { omniauth_callbacks: "omniauth_callbacks", sessions: 'users/sessions',registrations: 'users/users/registrations' }
+
+  devise_for :users, controllers: { omniauth_callbacks: "omniauth_callbacks" }
+
   devise_scope :user do
-    get "sign_in", to: "users/sessions#new"
-    get "register", to: "users/registrations#create"
+    post "/users/sign_in", to: "sessions#new"
+    post "/users/register", to: "registrations#create"
+    delete "/users/sign_out", to: "sessions#destroy"
   end
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
   root :to => 'application#index'
+  resources :users
   ####post 'users/register' =>'users/registrations#create'
   ###ActiveAdmin.routes(self)
   # The priority is based upon order of creation: first created -> highest priority.
