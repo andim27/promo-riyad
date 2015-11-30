@@ -6,7 +6,12 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
 		user = User.from_omniauth(env["omniauth.auth"], current_user)
 		if user.persisted?
 			flash[:notice] = "You are in..!!! Go to edit profile to see the status for the accounts"
-			sign_in_and_redirect(user)
+
+      scope    = Devise::Mapping.find_scope!(user)
+      resource = user
+      sign_in(scope, resource)
+
+      redirect_to root_url
 		else
 			session["devise.user_attributes"] = user.attributes
 			redirect_to new_user_registration_url
@@ -19,7 +24,10 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
       super
    end
 
-
+  #def after_sign_up_path_for(resource)
+  #
+  #  sign_in_and_redirect(root)
+  #end
 	alias_method :facebook, :all
 	alias_method :twitter, :all
 	alias_method :linkedin, :all

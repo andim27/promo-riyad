@@ -1,6 +1,9 @@
 // preloader
 $(window).load(function(){
-    $('.preloader').fadeOut(1000); // set duration in brackets    
+    $('.preloader').fadeOut(1000); // set duration in brackets
+    if (window.location.hash == "#_=_") {
+        window.location.hash = "";
+    }
 });
 
 $(function() {

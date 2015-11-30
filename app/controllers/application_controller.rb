@@ -6,4 +6,6 @@ class ApplicationController < ActionController::Base
   def index
     render  :template=>"pages/home", :layout => "layouts/application"
   end
+
+
 end

@@ -16,5 +16,5 @@
 !/log/.keep
 /tmp
 .idea
-d:\\work\\ClickApp\\promo-riyad\\config\\social_keys_local.yml
+/config/social_keys_local.yml
 
