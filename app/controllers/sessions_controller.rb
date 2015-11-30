@@ -1,7 +1,8 @@
 class SessionsController < Devise::SessionsController
   respond_to :html, :json
+  clear_respond_to
   def create
-    raise "stop"
+    #raise "stop"
     self.resource = warden.authenticate!(auth_options)
 
     set_flash_message(:notice, :signed_in) if is_flashing_format?
