@@ -20602,3 +20602,613 @@ I, [2015-12-01T13:35:42.152317 #4432]  INFO -- :   Rendered D:/Progs/Ruby22-x64/
 D, [2015-12-01T13:35:42.152317 #4432] DEBUG -- : 
 D, [2015-12-01T13:35:42.152317 #4432] DEBUG -- : 
 I, [2015-12-01T13:35:42.152317 #4432]  INFO -- : Started GET "/assets/software-img.png" for 127.0.0.1 at 2015-12-01 13:35:42 +0200
+D, [2015-12-01T21:26:40.557180 #4392] DEBUG -- : 
+D, [2015-12-01T21:26:40.577181 #4392] DEBUG -- : 
+I, [2015-12-01T21:26:40.578181 #4392]  INFO -- : Started GET "/" for 127.0.0.1 at 2015-12-01 21:26:40 +0200
+D, [2015-12-01T21:26:40.628184 #4392] DEBUG -- :   [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+I, [2015-12-01T21:26:40.686187 #4392]  INFO -- : Processing by ApplicationController#index as HTML
+I, [2015-12-01T21:26:40.909200 #4392]  INFO -- :   Rendered pages/home.html.erb within layouts/application (182.0ms)
+I, [2015-12-01T21:26:40.910200 #4392]  INFO -- : Completed 500 Internal Server Error in 224ms (ActiveRecord: 2.0ms)
+F, [2015-12-01T21:26:40.915200 #4392] FATAL -- : 
+ActionView::Template::Error (Missing partial application/_country_select with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:erb, :builder, :raw, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "D:/work/ClickApp/promo-riyad/app/views"
+  * "D:/Progs/Ruby22-x64/lib/ruby/gems/2.2.0/gems/devise-3.5.2/app/views"
+):
+    481: 
+    482:                           <label class="" for="user_location">Location</label>
+    483:                           <input type="text" autofocus="" required="" placeholder="Your country" class="form-control" id="user_location" name="user[location]"><br>
+    484:                             <%= render partial: "country_select" %>
+    485:                           <label class="" for="user_about">Description</label>
+    486:                           <input type="text" autofocus="" required="" placeholder="Your short description" class="form-control" id="user_about" name="user[about]"><br>
+    487:                             <% if Devise.mappings[:user].rememberable? -%>
+  app/views/pages/home.html.erb:484:in `block in _app_views_pages_home_html_erb___183898046_67106780'
+  app/views/pages/home.html.erb:468:in `_app_views_pages_home_html_erb___183898046_67106780'
+  app/controllers/application_controller.rb:7:in `index'
+
+
+I, [2015-12-01T21:26:41.381227 #4392]  INFO -- :   Rendered D:/Progs/Ruby22-x64/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.0ms)
+I, [2015-12-01T21:26:41.536236 #4392]  INFO -- :   Rendered D:/Progs/Ruby22-x64/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (6.0ms)
+I, [2015-12-01T21:26:41.680244 #4392]  INFO -- :   Rendered D:/Progs/Ruby22-x64/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+I, [2015-12-01T21:26:41.680244 #4392]  INFO -- :   Rendered D:/Progs/Ruby22-x64/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (439.0ms)
+I, [2015-12-01T21:26:41.938259 #4392]  INFO -- :   Rendered D:/Progs/Ruby22-x64/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (1.0ms)
+I, [2015-12-01T21:26:42.227275 #4392]  INFO -- :   Rendered D:/Progs/Ruby22-x64/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.0ms)
+I, [2015-12-01T21:26:42.362283 #4392]  INFO -- :   Rendered D:/Progs/Ruby22-x64/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.0ms)
+I, [2015-12-01T21:26:42.493291 #4392]  INFO -- :   Rendered D:/Progs/Ruby22-x64/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.0ms)
+I, [2015-12-01T21:26:42.494291 #4392]  INFO -- :   Rendered D:/Progs/Ruby22-x64/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (401.0ms)
+I, [2015-12-01T21:26:42.629298 #4392]  INFO -- :   Rendered D:/Progs/Ruby22-x64/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.0ms)
+I, [2015-12-01T21:26:42.759306 #4392]  INFO -- :   Rendered D:/Progs/Ruby22-x64/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.0ms)
+I, [2015-12-01T21:26:42.762306 #4392]  INFO -- :   Rendered D:/Progs/Ruby22-x64/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (945.1ms)
+D, [2015-12-01T21:27:22.581583 #4392] DEBUG -- : 
+D, [2015-12-01T21:27:22.581583 #4392] DEBUG -- : 
+I, [2015-12-01T21:27:22.581583 #4392]  INFO -- : Started GET "/" for 127.0.0.1 at 2015-12-01 21:27:22 +0200
+I, [2015-12-01T21:27:22.630586 #4392]  INFO -- : Processing by ApplicationController#index as HTML
+I, [2015-12-01T21:27:22.698590 #4392]  INFO -- :   Rendered pages/_country_select.html.erb (0.0ms)
+I, [2015-12-01T21:27:22.700590 #4392]  INFO -- :   Rendered pages/home.html.erb within layouts/application (52.0ms)
+I, [2015-12-01T21:27:22.982606 #4392]  INFO -- : Completed 200 OK in 352ms (Views: 350.5ms | ActiveRecord: 1.0ms)
+D, [2015-12-01T21:27:23.235621 #4392] DEBUG -- : 
+D, [2015-12-01T21:27:23.238621 #4392] DEBUG -- : 
+I, [2015-12-01T21:27:23.241621 #4392]  INFO -- : Started GET "/assets/templatemo-style.self-1c2364f0684e185fe66d47f93573bf91a3054a824899fa9d5fc659fae5f4d35e.css?body=1" for 127.0.0.1 at 2015-12-01 21:27:23 +0200
+D, [2015-12-01T21:27:23.299625 #4392] DEBUG -- : 
+D, [2015-12-01T21:27:23.302625 #4392] DEBUG -- : 
+I, [2015-12-01T21:27:23.303625 #4392]  INFO -- : Started GET "/assets/animate.min.self-0c3f9476f6e414f4c45f1792970e5960851067af8bf0d140374c0d7556209d1e.css?body=1" for 127.0.0.1 at 2015-12-01 21:27:23 +0200
+D, [2015-12-01T21:27:23.351628 #4392] DEBUG -- : 
+D, [2015-12-01T21:27:23.351628 #4392] DEBUG -- : 
+I, [2015-12-01T21:27:23.352628 #4392]  INFO -- : Started GET "/assets/font-awesome.self-be09f9a5a5e8fd15a4e4d68dc8509252a33dc056003e53159586cf99368ba0e7.css?body=1" for 127.0.0.1 at 2015-12-01 21:27:23 +0200
+D, [2015-12-01T21:27:23.418631 #4392] DEBUG -- : 
+D, [2015-12-01T21:27:23.419631 #4392] DEBUG -- : 
+I, [2015-12-01T21:27:23.423632 #4392]  INFO -- : Started GET "/assets/custom.self-a36c931221df00df7ed7c2791f9652528ac6e5966284b56a5560d517dbb9c866.css?body=1" for 127.0.0.1 at 2015-12-01 21:27:23 +0200
+D, [2015-12-01T21:27:23.491636 #4392] DEBUG -- : 
+D, [2015-12-01T21:27:23.492636 #4392] DEBUG -- : 
+I, [2015-12-01T21:27:23.492636 #4392]  INFO -- : Started GET "/assets/bootstrap.min.self-2c354d7c0179bd35563b93633b23ac5fb07c67d531d40a75695bacbd0eadb799.css?body=1" for 127.0.0.1 at 2015-12-01 21:27:23 +0200
+D, [2015-12-01T21:27:23.568640 #4392] DEBUG -- : 
+D, [2015-12-01T21:27:23.569640 #4392] DEBUG -- : 
+I, [2015-12-01T21:27:23.571640 #4392]  INFO -- : Started GET "/assets/application.self-d885a0a66bd595c10edb24f8879f94e334d88be0730c4d7c7a7b57c731c09037.css?body=1" for 127.0.0.1 at 2015-12-01 21:27:23 +0200
+D, [2015-12-01T21:27:23.645644 #4392] DEBUG -- : 
+D, [2015-12-01T21:27:23.645644 #4392] DEBUG -- : 
+I, [2015-12-01T21:27:23.646644 #4392]  INFO -- : Started GET "/assets/jquery.singlePageNav.min.self-847e8c0c75aa355d21bee961f4d2a2f7d5358b7fb4ff368642f66ded542af090.js?body=1" for 127.0.0.1 at 2015-12-01 21:27:23 +0200
+D, [2015-12-01T21:27:23.689647 #4392] DEBUG -- : 
+D, [2015-12-01T21:27:23.690647 #4392] DEBUG -- : 
+I, [2015-12-01T21:27:23.691647 #4392]  INFO -- : Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 127.0.0.1 at 2015-12-01 21:27:23 +0200
+D, [2015-12-01T21:27:23.749650 #4392] DEBUG -- : 
+D, [2015-12-01T21:27:23.749650 #4392] DEBUG -- : 
+I, [2015-12-01T21:27:23.750650 #4392]  INFO -- : Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2015-12-01 21:27:23 +0200
+D, [2015-12-01T21:27:23.812654 #4392] DEBUG -- : 
+D, [2015-12-01T21:27:23.812654 #4392] DEBUG -- : 
+I, [2015-12-01T21:27:23.824655 #4392]  INFO -- : Started GET "/assets/bootstrap.min.self-d66e555f160df017adf1ca16a36cd609a36d49c51637e365c5b8847d0065fa40.js?body=1" for 127.0.0.1 at 2015-12-01 21:27:23 +0200
+D, [2015-12-01T21:27:23.860657 #4392] DEBUG -- : 
+D, [2015-12-01T21:27:23.861657 #4392] DEBUG -- : 
+I, [2015-12-01T21:27:23.873657 #4392]  INFO -- : Started GET "/assets/custom.self-9c139bdd65ff37be69a29622aeb1af5d9290586f26c6687132d456bb2661537a.js?body=1" for 127.0.0.1 at 2015-12-01 21:27:23 +0200
+D, [2015-12-01T21:27:23.912660 #4392] DEBUG -- : 
+D, [2015-12-01T21:27:23.918660 #4392] DEBUG -- : 
+I, [2015-12-01T21:27:23.919660 #4392]  INFO -- : Started GET "/assets/jquery.self-11cf16f9fa47f38ff39b9db8c53ebbeba67b045f87f6bfdb655cc618bcf31445.js?body=1" for 127.0.0.1 at 2015-12-01 21:27:23 +0200
+D, [2015-12-01T21:27:23.958662 #4392] DEBUG -- : 
+D, [2015-12-01T21:27:23.958662 #4392] DEBUG -- : 
+I, [2015-12-01T21:27:23.986664 #4392]  INFO -- : Started GET "/assets/wow.min.self-a562747182e965d7399b4fd740fcd8cff702334db5b9614833f9b927be2a81ed.js?body=1" for 127.0.0.1 at 2015-12-01 21:27:23 +0200
+D, [2015-12-01T21:27:24.027666 #4392] DEBUG -- : 
+D, [2015-12-01T21:27:24.028666 #4392] DEBUG -- : 
+I, [2015-12-01T21:27:24.032666 #4392]  INFO -- : Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2015-12-01 21:27:24 +0200
+D, [2015-12-01T21:27:24.097670 #4392] DEBUG -- : 
+D, [2015-12-01T21:27:24.102670 #4392] DEBUG -- : 
+I, [2015-12-01T21:27:24.102670 #4392]  INFO -- : Started GET "/assets/jquery.min.map" for 127.0.0.1 at 2015-12-01 21:27:24 +0200
+D, [2015-12-01T21:27:24.171674 #4392] DEBUG -- : 
+D, [2015-12-01T21:27:24.172674 #4392] DEBUG -- : 
+I, [2015-12-01T21:27:24.172674 #4392]  INFO -- : Started GET "/assets/contact-map.jpg" for 127.0.0.1 at 2015-12-01 21:27:24 +0200
+D, [2015-12-01T21:27:24.250679 #4392] DEBUG -- : 
+D, [2015-12-01T21:27:24.250679 #4392] DEBUG -- : 
+I, [2015-12-01T21:27:24.250679 #4392]  INFO -- : Started GET "/assets/software-img.png" for 127.0.0.1 at 2015-12-01 21:27:24 +0200
+D, [2015-12-01T21:27:24.662703 #4392] DEBUG -- : 
+D, [2015-12-01T21:27:24.665703 #4392] DEBUG -- : 
+I, [2015-12-01T21:27:24.668703 #4392]  INFO -- : Started GET "/assets/contact-bg.jpg" for 127.0.0.1 at 2015-12-01 21:27:24 +0200
+D, [2015-12-01T21:27:24.769709 #4392] DEBUG -- : 
+D, [2015-12-01T21:27:24.799710 #4392] DEBUG -- : 
+I, [2015-12-01T21:27:24.801710 #4392]  INFO -- : Started GET "/assets/fontawesome-webfont-3c4a1bb7ce3234407184f0d80cc4dec075e4ad616b44dcc5778e1cfb1bc24019.woff2?v=4.4.0" for 127.0.0.1 at 2015-12-01 21:27:24 +0200
+D, [2015-12-01T21:27:24.860714 #4392] DEBUG -- : 
+D, [2015-12-01T21:27:24.861714 #4392] DEBUG -- : 
+I, [2015-12-01T21:27:24.875715 #4392]  INFO -- : Started GET "/assets/home-bg.jpg" for 127.0.0.1 at 2015-12-01 21:27:24 +0200
+D, [2015-12-01T21:30:09.231115 #4392] DEBUG -- : 
+D, [2015-12-01T21:30:09.231115 #4392] DEBUG -- : 
+I, [2015-12-01T21:30:09.231115 #4392]  INFO -- : Started GET "/" for 127.0.0.1 at 2015-12-01 21:30:09 +0200
+I, [2015-12-01T21:30:09.279118 #4392]  INFO -- : Processing by ApplicationController#index as HTML
+I, [2015-12-01T21:30:09.337121 #4392]  INFO -- :   Rendered pages/_country_select.html.erb (1.0ms)
+I, [2015-12-01T21:30:09.339121 #4392]  INFO -- :   Rendered pages/home.html.erb within layouts/application (43.0ms)
+I, [2015-12-01T21:30:09.454128 #4392]  INFO -- : Completed 200 OK in 175ms (Views: 171.8ms | ActiveRecord: 2.0ms)
+D, [2015-12-01T21:30:09.702142 #4392] DEBUG -- : 
+D, [2015-12-01T21:30:09.702142 #4392] DEBUG -- : 
+I, [2015-12-01T21:30:09.706142 #4392]  INFO -- : Started GET "/assets/font-awesome.self-be09f9a5a5e8fd15a4e4d68dc8509252a33dc056003e53159586cf99368ba0e7.css?body=1" for 127.0.0.1 at 2015-12-01 21:30:09 +0200
+D, [2015-12-01T21:30:09.770146 #4392] DEBUG -- : 
+D, [2015-12-01T21:30:09.773146 #4392] DEBUG -- : 
+I, [2015-12-01T21:30:09.777147 #4392]  INFO -- : Started GET "/assets/animate.min.self-0c3f9476f6e414f4c45f1792970e5960851067af8bf0d140374c0d7556209d1e.css?body=1" for 127.0.0.1 at 2015-12-01 21:30:09 +0200
+D, [2015-12-01T21:30:09.844150 #4392] DEBUG -- : 
+D, [2015-12-01T21:30:09.845150 #4392] DEBUG -- : 
+I, [2015-12-01T21:30:09.845150 #4392]  INFO -- : Started GET "/assets/application.self-d885a0a66bd595c10edb24f8879f94e334d88be0730c4d7c7a7b57c731c09037.css?body=1" for 127.0.0.1 at 2015-12-01 21:30:09 +0200
+D, [2015-12-01T21:30:09.890153 #4392] DEBUG -- : 
+D, [2015-12-01T21:30:09.891153 #4392] DEBUG -- : 
+I, [2015-12-01T21:30:09.891153 #4392]  INFO -- : Started GET "/assets/templatemo-style.self-1c2364f0684e185fe66d47f93573bf91a3054a824899fa9d5fc659fae5f4d35e.css?body=1" for 127.0.0.1 at 2015-12-01 21:30:09 +0200
+D, [2015-12-01T21:30:09.945156 #4392] DEBUG -- : 
+D, [2015-12-01T21:30:09.946156 #4392] DEBUG -- : 
+I, [2015-12-01T21:30:09.946156 #4392]  INFO -- : Started GET "/assets/custom.self-a36c931221df00df7ed7c2791f9652528ac6e5966284b56a5560d517dbb9c866.css?body=1" for 127.0.0.1 at 2015-12-01 21:30:09 +0200
+D, [2015-12-01T21:30:09.990159 #4392] DEBUG -- : 
+D, [2015-12-01T21:30:09.990159 #4392] DEBUG -- : 
+I, [2015-12-01T21:30:09.991159 #4392]  INFO -- : Started GET "/assets/custom.self-9c139bdd65ff37be69a29622aeb1af5d9290586f26c6687132d456bb2661537a.js?body=1" for 127.0.0.1 at 2015-12-01 21:30:09 +0200
+D, [2015-12-01T21:30:10.037161 #4392] DEBUG -- : 
+D, [2015-12-01T21:30:10.037161 #4392] DEBUG -- : 
+I, [2015-12-01T21:30:10.038161 #4392]  INFO -- : Started GET "/assets/jquery.self-11cf16f9fa47f38ff39b9db8c53ebbeba67b045f87f6bfdb655cc618bcf31445.js?body=1" for 127.0.0.1 at 2015-12-01 21:30:10 +0200
+D, [2015-12-01T21:30:10.077164 #4392] DEBUG -- : 
+D, [2015-12-01T21:30:10.077164 #4392] DEBUG -- : 
+I, [2015-12-01T21:30:10.079164 #4392]  INFO -- : Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 127.0.0.1 at 2015-12-01 21:30:10 +0200
+D, [2015-12-01T21:30:10.119166 #4392] DEBUG -- : 
+D, [2015-12-01T21:30:10.128167 #4392] DEBUG -- : 
+I, [2015-12-01T21:30:10.129167 #4392]  INFO -- : Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2015-12-01 21:30:10 +0200
+D, [2015-12-01T21:30:10.179170 #4392] DEBUG -- : 
+D, [2015-12-01T21:30:10.179170 #4392] DEBUG -- : 
+I, [2015-12-01T21:30:10.180170 #4392]  INFO -- : Started GET "/assets/bootstrap.min.self-d66e555f160df017adf1ca16a36cd609a36d49c51637e365c5b8847d0065fa40.js?body=1" for 127.0.0.1 at 2015-12-01 21:30:10 +0200
+D, [2015-12-01T21:30:10.217172 #4392] DEBUG -- : 
+D, [2015-12-01T21:30:10.218172 #4392] DEBUG -- : 
+I, [2015-12-01T21:30:10.225172 #4392]  INFO -- : Started GET "/assets/bootstrap.min.self-2c354d7c0179bd35563b93633b23ac5fb07c67d531d40a75695bacbd0eadb799.css?body=1" for 127.0.0.1 at 2015-12-01 21:30:10 +0200
+D, [2015-12-01T21:30:10.262174 #4392] DEBUG -- : 
+D, [2015-12-01T21:30:10.271175 #4392] DEBUG -- : 
+I, [2015-12-01T21:30:10.272175 #4392]  INFO -- : Started GET "/assets/jquery.singlePageNav.min.self-847e8c0c75aa355d21bee961f4d2a2f7d5358b7fb4ff368642f66ded542af090.js?body=1" for 127.0.0.1 at 2015-12-01 21:30:10 +0200
+D, [2015-12-01T21:30:10.314177 #4392] DEBUG -- : 
+D, [2015-12-01T21:30:10.323178 #4392] DEBUG -- : 
+I, [2015-12-01T21:30:10.324178 #4392]  INFO -- : Started GET "/assets/wow.min.self-a562747182e965d7399b4fd740fcd8cff702334db5b9614833f9b927be2a81ed.js?body=1" for 127.0.0.1 at 2015-12-01 21:30:10 +0200
+D, [2015-12-01T21:30:10.391182 #4392] DEBUG -- : 
+D, [2015-12-01T21:30:10.392182 #4392] DEBUG -- : 
+I, [2015-12-01T21:30:10.392182 #4392]  INFO -- : Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2015-12-01 21:30:10 +0200
+D, [2015-12-01T21:30:10.435184 #4392] DEBUG -- : 
+D, [2015-12-01T21:30:10.436184 #4392] DEBUG -- : 
+I, [2015-12-01T21:30:10.449185 #4392]  INFO -- : Started GET "/assets/jquery.min.map" for 127.0.0.1 at 2015-12-01 21:30:10 +0200
+D, [2015-12-01T21:30:10.726201 #4392] DEBUG -- : 
+D, [2015-12-01T21:30:10.726201 #4392] DEBUG -- : 
+I, [2015-12-01T21:30:10.727201 #4392]  INFO -- : Started GET "/assets/software-img.png" for 127.0.0.1 at 2015-12-01 21:30:10 +0200
+D, [2015-12-01T21:30:10.766203 #4392] DEBUG -- : 
+D, [2015-12-01T21:30:10.773203 #4392] DEBUG -- : 
+I, [2015-12-01T21:30:10.774204 #4392]  INFO -- : Started GET "/assets/contact-map.jpg" for 127.0.0.1 at 2015-12-01 21:30:10 +0200
+D, [2015-12-01T21:30:11.097222 #4392] DEBUG -- : 
+D, [2015-12-01T21:30:11.097222 #4392] DEBUG -- : 
+I, [2015-12-01T21:30:11.098222 #4392]  INFO -- : Started GET "/assets/contact-bg.jpg" for 127.0.0.1 at 2015-12-01 21:30:11 +0200
+D, [2015-12-01T21:30:11.141225 #4392] DEBUG -- : 
+D, [2015-12-01T21:30:11.141225 #4392] DEBUG -- : 
+I, [2015-12-01T21:30:11.142225 #4392]  INFO -- : Started GET "/assets/home-bg.jpg" for 127.0.0.1 at 2015-12-01 21:30:11 +0200
+D, [2015-12-01T21:30:11.564249 #4392] DEBUG -- : 
+D, [2015-12-01T21:30:11.565249 #4392] DEBUG -- : 
+I, [2015-12-01T21:30:11.565249 #4392]  INFO -- : Started GET "/assets/jquery-1.11.3.js" for 127.0.0.1 at 2015-12-01 21:30:11 +0200
+F, [2015-12-01T21:30:11.675255 #4392] FATAL -- : 
+ActionController::RoutingError (No route matches [GET] "/assets/jquery-1.11.3.js"):
+  actionpack (4.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5) lib/rails/rack/logger.rb:22:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  D:/Progs/Ruby22-x64/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  D:/Progs/Ruby22-x64/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  D:/Progs/Ruby22-x64/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+I, [2015-12-01T21:30:12.029275 #4392]  INFO -- :   Rendered D:/Progs/Ruby22-x64/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.0ms)
+I, [2015-12-01T21:30:12.202285 #4392]  INFO -- :   Rendered D:/Progs/Ruby22-x64/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_route.html.erb (17.0ms)
+I, [2015-12-01T21:30:12.370295 #4392]  INFO -- :   Rendered D:/Progs/Ruby22-x64/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_table.html.erb (12.0ms)
+I, [2015-12-01T21:30:12.528304 #4392]  INFO -- :   Rendered D:/Progs/Ruby22-x64/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.0ms)
+I, [2015-12-01T21:30:12.529304 #4392]  INFO -- :   Rendered D:/Progs/Ruby22-x64/lib/ruby/gems/2.2.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (674.0ms)
+I, [2015-12-01T21:30:12.793319 #4392]  INFO -- :   Rendered D:/Progs/Ruby22-x64/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.0ms)
+I, [2015-12-01T21:30:13.056334 #4392]  INFO -- :   Rendered D:/Progs/Ruby22-x64/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.0ms)
+I, [2015-12-01T21:30:13.187342 #4392]  INFO -- :   Rendered D:/Progs/Ruby22-x64/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.0ms)
+I, [2015-12-01T21:30:13.318349 #4392]  INFO -- :   Rendered D:/Progs/Ruby22-x64/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.0ms)
+I, [2015-12-01T21:30:13.319349 #4392]  INFO -- :   Rendered D:/Progs/Ruby22-x64/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (394.0ms)
+I, [2015-12-01T21:30:13.463357 #4392]  INFO -- :   Rendered D:/Progs/Ruby22-x64/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.0ms)
+I, [2015-12-01T21:30:13.597365 #4392]  INFO -- :   Rendered D:/Progs/Ruby22-x64/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.0ms)
+I, [2015-12-01T21:30:13.597365 #4392]  INFO -- :   Rendered D:/Progs/Ruby22-x64/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (944.1ms)
+D, [2015-12-01T21:31:40.221320 #4392] DEBUG -- : 
+D, [2015-12-01T21:31:40.221320 #4392] DEBUG -- : 
+I, [2015-12-01T21:31:40.222320 #4392]  INFO -- : Started GET "/" for 127.0.0.1 at 2015-12-01 21:31:40 +0200
+I, [2015-12-01T21:31:40.271322 #4392]  INFO -- : Processing by ApplicationController#index as HTML
+I, [2015-12-01T21:31:40.325326 #4392]  INFO -- :   Rendered pages/_country_select.html.erb (0.0ms)
+I, [2015-12-01T21:31:40.326326 #4392]  INFO -- :   Rendered pages/home.html.erb within layouts/application (38.0ms)
+I, [2015-12-01T21:31:40.434332 #4392]  INFO -- : Completed 200 OK in 160ms (Views: 158.7ms | ActiveRecord: 1.0ms)
+D, [2015-12-01T21:31:41.401387 #4392] DEBUG -- : 
+D, [2015-12-01T21:31:41.402387 #4392] DEBUG -- : 
+I, [2015-12-01T21:31:41.402387 #4392]  INFO -- : Started GET "/assets/font-awesome.self-be09f9a5a5e8fd15a4e4d68dc8509252a33dc056003e53159586cf99368ba0e7.css?body=1" for 127.0.0.1 at 2015-12-01 21:31:41 +0200
+D, [2015-12-01T21:31:41.468391 #4392] DEBUG -- : 
+D, [2015-12-01T21:31:41.473391 #4392] DEBUG -- : 
+I, [2015-12-01T21:31:41.489392 #4392]  INFO -- : Started GET "/assets/custom.self-a36c931221df00df7ed7c2791f9652528ac6e5966284b56a5560d517dbb9c866.css?body=1" for 127.0.0.1 at 2015-12-01 21:31:41 +0200
+D, [2015-12-01T21:31:41.529394 #4392] DEBUG -- : 
+D, [2015-12-01T21:31:41.530395 #4392] DEBUG -- : 
+I, [2015-12-01T21:31:41.531395 #4392]  INFO -- : Started GET "/assets/animate.min.self-0c3f9476f6e414f4c45f1792970e5960851067af8bf0d140374c0d7556209d1e.css?body=1" for 127.0.0.1 at 2015-12-01 21:31:41 +0200
+D, [2015-12-01T21:31:41.583398 #4392] DEBUG -- : 
+D, [2015-12-01T21:31:41.584398 #4392] DEBUG -- : 
+I, [2015-12-01T21:31:41.585398 #4392]  INFO -- : Started GET "/assets/bootstrap.min.self-2c354d7c0179bd35563b93633b23ac5fb07c67d531d40a75695bacbd0eadb799.css?body=1" for 127.0.0.1 at 2015-12-01 21:31:41 +0200
+D, [2015-12-01T21:31:41.626400 #4392] DEBUG -- : 
+D, [2015-12-01T21:31:41.626400 #4392] DEBUG -- : 
+I, [2015-12-01T21:31:41.628400 #4392]  INFO -- : Started GET "/assets/templatemo-style.self-1c2364f0684e185fe66d47f93573bf91a3054a824899fa9d5fc659fae5f4d35e.css?body=1" for 127.0.0.1 at 2015-12-01 21:31:41 +0200
+D, [2015-12-01T21:31:41.671403 #4392] DEBUG -- : 
+D, [2015-12-01T21:31:41.671403 #4392] DEBUG -- : 
+I, [2015-12-01T21:31:41.672403 #4392]  INFO -- : Started GET "/assets/custom.self-9c139bdd65ff37be69a29622aeb1af5d9290586f26c6687132d456bb2661537a.js?body=1" for 127.0.0.1 at 2015-12-01 21:31:41 +0200
+D, [2015-12-01T21:31:41.710405 #4392] DEBUG -- : 
+D, [2015-12-01T21:31:41.711405 #4392] DEBUG -- : 
+I, [2015-12-01T21:31:41.712405 #4392]  INFO -- : Started GET "/assets/jquery.self-11cf16f9fa47f38ff39b9db8c53ebbeba67b045f87f6bfdb655cc618bcf31445.js?body=1" for 127.0.0.1 at 2015-12-01 21:31:41 +0200
+D, [2015-12-01T21:31:41.755407 #4392] DEBUG -- : 
+D, [2015-12-01T21:31:41.755407 #4392] DEBUG -- : 
+I, [2015-12-01T21:31:41.757407 #4392]  INFO -- : Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 127.0.0.1 at 2015-12-01 21:31:41 +0200
+D, [2015-12-01T21:31:41.804410 #4392] DEBUG -- : 
+D, [2015-12-01T21:31:41.804410 #4392] DEBUG -- : 
+I, [2015-12-01T21:31:41.805410 #4392]  INFO -- : Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2015-12-01 21:31:41 +0200
+D, [2015-12-01T21:31:41.865414 #4392] DEBUG -- : 
+D, [2015-12-01T21:31:41.867414 #4392] DEBUG -- : 
+I, [2015-12-01T21:31:41.868414 #4392]  INFO -- : Started GET "/assets/bootstrap.min.self-d66e555f160df017adf1ca16a36cd609a36d49c51637e365c5b8847d0065fa40.js?body=1" for 127.0.0.1 at 2015-12-01 21:31:41 +0200
+D, [2015-12-01T21:31:41.904416 #4392] DEBUG -- : 
+D, [2015-12-01T21:31:41.905416 #4392] DEBUG -- : 
+I, [2015-12-01T21:31:41.907416 #4392]  INFO -- : Started GET "/assets/application.self-d885a0a66bd595c10edb24f8879f94e334d88be0730c4d7c7a7b57c731c09037.css?body=1" for 127.0.0.1 at 2015-12-01 21:31:41 +0200
+D, [2015-12-01T21:31:41.959419 #4392] DEBUG -- : 
+D, [2015-12-01T21:31:41.960419 #4392] DEBUG -- : 
+I, [2015-12-01T21:31:41.961419 #4392]  INFO -- : Started GET "/assets/jquery.singlePageNav.min.self-847e8c0c75aa355d21bee961f4d2a2f7d5358b7fb4ff368642f66ded542af090.js?body=1" for 127.0.0.1 at 2015-12-01 21:31:41 +0200
+D, [2015-12-01T21:31:42.002422 #4392] DEBUG -- : 
+D, [2015-12-01T21:31:42.007422 #4392] DEBUG -- : 
+I, [2015-12-01T21:31:42.008422 #4392]  INFO -- : Started GET "/assets/wow.min.self-a562747182e965d7399b4fd740fcd8cff702334db5b9614833f9b927be2a81ed.js?body=1" for 127.0.0.1 at 2015-12-01 21:31:42 +0200
+D, [2015-12-01T21:31:42.050424 #4392] DEBUG -- : 
+D, [2015-12-01T21:31:42.050424 #4392] DEBUG -- : 
+I, [2015-12-01T21:31:42.051424 #4392]  INFO -- : Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2015-12-01 21:31:42 +0200
+D, [2015-12-01T21:31:42.095427 #4392] DEBUG -- : 
+D, [2015-12-01T21:31:42.096427 #4392] DEBUG -- : 
+I, [2015-12-01T21:31:42.097427 #4392]  INFO -- : Started GET "/assets/jquery.min.map" for 127.0.0.1 at 2015-12-01 21:31:42 +0200
+D, [2015-12-01T21:31:42.330440 #4392] DEBUG -- : 
+D, [2015-12-01T21:31:42.331440 #4392] DEBUG -- : 
+I, [2015-12-01T21:31:42.331440 #4392]  INFO -- : Started GET "/assets/software-img.png" for 127.0.0.1 at 2015-12-01 21:31:42 +0200
+D, [2015-12-01T21:31:42.388444 #4392] DEBUG -- : 
+D, [2015-12-01T21:31:42.388444 #4392] DEBUG -- : 
+I, [2015-12-01T21:31:42.388444 #4392]  INFO -- : Started GET "/assets/contact-map.jpg" for 127.0.0.1 at 2015-12-01 21:31:42 +0200
+D, [2015-12-01T21:31:42.611456 #4392] DEBUG -- : 
+D, [2015-12-01T21:31:42.613456 #4392] DEBUG -- : 
+I, [2015-12-01T21:31:42.613456 #4392]  INFO -- : Started GET "/assets/home-bg.jpg" for 127.0.0.1 at 2015-12-01 21:31:42 +0200
+D, [2015-12-01T21:31:42.652459 #4392] DEBUG -- : 
+D, [2015-12-01T21:31:42.652459 #4392] DEBUG -- : 
+I, [2015-12-01T21:31:42.652459 #4392]  INFO -- : Started GET "/assets/contact-bg.jpg" for 127.0.0.1 at 2015-12-01 21:31:42 +0200
+D, [2015-12-01T21:33:25.393335 #4392] DEBUG -- : 
+D, [2015-12-01T21:33:25.393335 #4392] DEBUG -- : 
+I, [2015-12-01T21:33:25.394335 #4392]  INFO -- : Started GET "/" for 127.0.0.1 at 2015-12-01 21:33:25 +0200
+I, [2015-12-01T21:33:25.444338 #4392]  INFO -- : Processing by ApplicationController#index as HTML
+I, [2015-12-01T21:33:25.501341 #4392]  INFO -- :   Rendered pages/_country_select.html.erb (0.0ms)
+I, [2015-12-01T21:33:25.502341 #4392]  INFO -- :   Rendered pages/home.html.erb within layouts/application (40.0ms)
+I, [2015-12-01T21:33:25.659350 #4392]  INFO -- : Completed 200 OK in 214ms (Views: 210.9ms | ActiveRecord: 2.0ms)
+D, [2015-12-01T21:33:26.331389 #4392] DEBUG -- : 
+D, [2015-12-01T21:33:26.338389 #4392] DEBUG -- : 
+I, [2015-12-01T21:33:26.341389 #4392]  INFO -- : Started GET "/assets/bootstrap.min.self-2c354d7c0179bd35563b93633b23ac5fb07c67d531d40a75695bacbd0eadb799.css?body=1" for 127.0.0.1 at 2015-12-01 21:33:26 +0200
+D, [2015-12-01T21:33:26.393392 #4392] DEBUG -- : 
+D, [2015-12-01T21:33:26.393392 #4392] DEBUG -- : 
+I, [2015-12-01T21:33:26.402393 #4392]  INFO -- : Started GET "/assets/font-awesome.self-be09f9a5a5e8fd15a4e4d68dc8509252a33dc056003e53159586cf99368ba0e7.css?body=1" for 127.0.0.1 at 2015-12-01 21:33:26 +0200
+D, [2015-12-01T21:33:26.448395 #4392] DEBUG -- : 
+D, [2015-12-01T21:33:26.452396 #4392] DEBUG -- : 
+I, [2015-12-01T21:33:26.452396 #4392]  INFO -- : Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 127.0.0.1 at 2015-12-01 21:33:26 +0200
+D, [2015-12-01T21:33:26.498398 #4392] DEBUG -- : 
+D, [2015-12-01T21:33:26.498398 #4392] DEBUG -- : 
+I, [2015-12-01T21:33:26.499398 #4392]  INFO -- : Started GET "/assets/custom.self-a36c931221df00df7ed7c2791f9652528ac6e5966284b56a5560d517dbb9c866.css?body=1" for 127.0.0.1 at 2015-12-01 21:33:26 +0200
+D, [2015-12-01T21:33:26.542401 #4392] DEBUG -- : 
+D, [2015-12-01T21:33:26.543401 #4392] DEBUG -- : 
+I, [2015-12-01T21:33:26.543401 #4392]  INFO -- : Started GET "/assets/templatemo-style.self-1c2364f0684e185fe66d47f93573bf91a3054a824899fa9d5fc659fae5f4d35e.css?body=1" for 127.0.0.1 at 2015-12-01 21:33:26 +0200
+D, [2015-12-01T21:33:26.598404 #4392] DEBUG -- : 
+D, [2015-12-01T21:33:26.599404 #4392] DEBUG -- : 
+I, [2015-12-01T21:33:26.600404 #4392]  INFO -- : Started GET "/assets/application.self-d885a0a66bd595c10edb24f8879f94e334d88be0730c4d7c7a7b57c731c09037.css?body=1" for 127.0.0.1 at 2015-12-01 21:33:26 +0200
+D, [2015-12-01T21:33:26.656407 #4392] DEBUG -- : 
+D, [2015-12-01T21:33:26.657407 #4392] DEBUG -- : 
+I, [2015-12-01T21:33:26.658407 #4392]  INFO -- : Started GET "/assets/jquery.self-11cf16f9fa47f38ff39b9db8c53ebbeba67b045f87f6bfdb655cc618bcf31445.js?body=1" for 127.0.0.1 at 2015-12-01 21:33:26 +0200
+D, [2015-12-01T21:33:26.699410 #4392] DEBUG -- : 
+D, [2015-12-01T21:33:26.700410 #4392] DEBUG -- : 
+I, [2015-12-01T21:33:26.701410 #4392]  INFO -- : Started GET "/assets/animate.min.self-0c3f9476f6e414f4c45f1792970e5960851067af8bf0d140374c0d7556209d1e.css?body=1" for 127.0.0.1 at 2015-12-01 21:33:26 +0200
+D, [2015-12-01T21:33:26.780414 #4392] DEBUG -- : 
+D, [2015-12-01T21:33:26.781415 #4392] DEBUG -- : 
+I, [2015-12-01T21:33:26.781415 #4392]  INFO -- : Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2015-12-01 21:33:26 +0200
+D, [2015-12-01T21:33:26.870420 #4392] DEBUG -- : 
+D, [2015-12-01T21:33:26.870420 #4392] DEBUG -- : 
+I, [2015-12-01T21:33:26.871420 #4392]  INFO -- : Started GET "/assets/bootstrap.min.self-d66e555f160df017adf1ca16a36cd609a36d49c51637e365c5b8847d0065fa40.js?body=1" for 127.0.0.1 at 2015-12-01 21:33:26 +0200
+D, [2015-12-01T21:33:26.953424 #4392] DEBUG -- : 
+D, [2015-12-01T21:33:26.953424 #4392] DEBUG -- : 
+I, [2015-12-01T21:33:26.954424 #4392]  INFO -- : Started GET "/assets/custom.self-9c139bdd65ff37be69a29622aeb1af5d9290586f26c6687132d456bb2661537a.js?body=1" for 127.0.0.1 at 2015-12-01 21:33:26 +0200
+D, [2015-12-01T21:33:27.020428 #4392] DEBUG -- : 
+D, [2015-12-01T21:33:27.020428 #4392] DEBUG -- : 
+I, [2015-12-01T21:33:27.021428 #4392]  INFO -- : Started GET "/assets/jquery.singlePageNav.min.self-847e8c0c75aa355d21bee961f4d2a2f7d5358b7fb4ff368642f66ded542af090.js?body=1" for 127.0.0.1 at 2015-12-01 21:33:27 +0200
+D, [2015-12-01T21:33:27.091432 #4392] DEBUG -- : 
+D, [2015-12-01T21:33:27.092432 #4392] DEBUG -- : 
+I, [2015-12-01T21:33:27.093432 #4392]  INFO -- : Started GET "/assets/wow.min.self-a562747182e965d7399b4fd740fcd8cff702334db5b9614833f9b927be2a81ed.js?body=1" for 127.0.0.1 at 2015-12-01 21:33:27 +0200
+D, [2015-12-01T21:33:27.133435 #4392] DEBUG -- : 
+D, [2015-12-01T21:33:27.133435 #4392] DEBUG -- : 
+I, [2015-12-01T21:33:27.134435 #4392]  INFO -- : Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2015-12-01 21:33:27 +0200
+D, [2015-12-01T21:33:27.178437 #4392] DEBUG -- : 
+D, [2015-12-01T21:33:27.179437 #4392] DEBUG -- : 
+I, [2015-12-01T21:33:27.180437 #4392]  INFO -- : Started GET "/assets/jquery.min.map" for 127.0.0.1 at 2015-12-01 21:33:27 +0200
+D, [2015-12-01T21:33:27.465454 #4392] DEBUG -- : 
+D, [2015-12-01T21:33:27.465454 #4392] DEBUG -- : 
+I, [2015-12-01T21:33:27.466454 #4392]  INFO -- : Started GET "/assets/software-img.png" for 127.0.0.1 at 2015-12-01 21:33:27 +0200
+D, [2015-12-01T21:33:27.511456 #4392] DEBUG -- : 
+D, [2015-12-01T21:33:27.511456 #4392] DEBUG -- : 
+I, [2015-12-01T21:33:27.512456 #4392]  INFO -- : Started GET "/assets/contact-map.jpg" for 127.0.0.1 at 2015-12-01 21:33:27 +0200
+D, [2015-12-01T21:33:27.751470 #4392] DEBUG -- : 
+D, [2015-12-01T21:33:27.751470 #4392] DEBUG -- : 
+I, [2015-12-01T21:33:27.755470 #4392]  INFO -- : Started GET "/assets/home-bg.jpg" for 127.0.0.1 at 2015-12-01 21:33:27 +0200
+D, [2015-12-01T21:33:27.797473 #4392] DEBUG -- : 
+D, [2015-12-01T21:33:27.798473 #4392] DEBUG -- : 
+I, [2015-12-01T21:33:27.800473 #4392]  INFO -- : Started GET "/assets/contact-bg.jpg" for 127.0.0.1 at 2015-12-01 21:33:27 +0200
+D, [2015-12-01T21:34:13.893109 #4392] DEBUG -- : 
+D, [2015-12-01T21:34:13.893109 #4392] DEBUG -- : 
+I, [2015-12-01T21:34:13.893109 #4392]  INFO -- : Started POST "/users" for 127.0.0.1 at 2015-12-01 21:34:13 +0200
+I, [2015-12-01T21:34:13.991115 #4392]  INFO -- : Processing by RegistrationsController#create as HTML
+I, [2015-12-01T21:34:13.992115 #4392]  INFO -- :   Parameters: {"utf8"=>"✓", "authenticity_token"=>"URDqeLYsaXPOibZRctDkG3sqgXLv6OfN2fesB+dZaezbJrMgc0cqBTdO/M+tTh0sXloFKXci0SAPGeu0BycAOg==", "user"=>{"name"=>"tolik", "email"=>"tolik@mail.ru", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "location"=>"AL", "about"=>"haha", "remember_me"=>"0"}}
+D, [2015-12-01T21:34:13.997115 #4392] DEBUG -- : Unpermitted parameter: remember_me
+D, [2015-12-01T21:34:14.080120 #4392] DEBUG -- :   [1m[35m (0.0ms)[0m  begin transaction
+D, [2015-12-01T21:34:14.104121 #4392] DEBUG -- :   [1m[36mUser Exists (0.0ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'tolik@mail.ru' LIMIT 1[0m
+D, [2015-12-01T21:34:14.107121 #4392] DEBUG -- :   [1m[35mSQL (0.0ms)[0m  INSERT INTO "users" ("name", "location", "about", "email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["name", "tolik"], ["location", "AL"], ["about", "haha"], ["email", "tolik@mail.ru"], ["encrypted_password", "$2a$10$ZX3G2RJ0btMg/LYV/7WLzeiTi..wecaZtwoxjQbBtryqMe8YYGtzW"], ["created_at", "2015-12-01 19:34:14.104121"], ["updated_at", "2015-12-01 19:34:14.104121"]]
+D, [2015-12-01T21:34:14.201127 #4392] DEBUG -- :   [1m[36m (92.0ms)[0m  [1mcommit transaction[0m
+D, [2015-12-01T21:34:14.203127 #4392] DEBUG -- :   [1m[35m (0.0ms)[0m  begin transaction
+D, [2015-12-01T21:34:14.213127 #4392] DEBUG -- :   [1m[36mSQL (1.0ms)[0m  [1mUPDATE "users" SET "last_sign_in_at" = ?, "current_sign_in_at" = ?, "last_sign_in_ip" = ?, "current_sign_in_ip" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["last_sign_in_at", "2015-12-01 19:34:14.202127"], ["current_sign_in_at", "2015-12-01 19:34:14.202127"], ["last_sign_in_ip", "127.0.0.1"], ["current_sign_in_ip", "127.0.0.1"], ["sign_in_count", 1], ["updated_at", "2015-12-01 19:34:14.204127"], ["id", 26]]
+D, [2015-12-01T21:34:14.301133 #4392] DEBUG -- :   [1m[35m (86.0ms)[0m  commit transaction
+I, [2015-12-01T21:34:14.373137 #4392]  INFO -- : Redirected to http://localhost:3000/
+I, [2015-12-01T21:34:14.374137 #4392]  INFO -- : Completed 302 Found in 382ms (ActiveRecord: 181.0ms)
+D, [2015-12-01T21:34:14.396138 #4392] DEBUG -- : 
+D, [2015-12-01T21:34:14.396138 #4392] DEBUG -- : 
+I, [2015-12-01T21:34:14.397138 #4392]  INFO -- : Started GET "/" for 127.0.0.1 at 2015-12-01 21:34:14 +0200
+I, [2015-12-01T21:34:14.447141 #4392]  INFO -- : Processing by ApplicationController#index as HTML
+D, [2015-12-01T21:34:14.480143 #4392] DEBUG -- :   [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 26]]
+I, [2015-12-01T21:34:14.515145 #4392]  INFO -- :   Rendered pages/_country_select.html.erb (0.0ms)
+I, [2015-12-01T21:34:14.516145 #4392]  INFO -- :   Rendered pages/home.html.erb within layouts/application (41.0ms)
+I, [2015-12-01T21:34:14.626151 #4392]  INFO -- : Completed 200 OK in 178ms (Views: 176.2ms | ActiveRecord: 1.0ms)
+D, [2015-12-01T21:34:14.859164 #4392] DEBUG -- : 
+D, [2015-12-01T21:34:14.859164 #4392] DEBUG -- : 
+I, [2015-12-01T21:34:14.861165 #4392]  INFO -- : Started GET "/assets/font-awesome.self-be09f9a5a5e8fd15a4e4d68dc8509252a33dc056003e53159586cf99368ba0e7.css?body=1" for 127.0.0.1 at 2015-12-01 21:34:14 +0200
+D, [2015-12-01T21:34:14.950170 #4392] DEBUG -- : 
+D, [2015-12-01T21:34:14.954170 #4392] DEBUG -- : 
+I, [2015-12-01T21:34:14.957170 #4392]  INFO -- : Started GET "/assets/animate.min.self-0c3f9476f6e414f4c45f1792970e5960851067af8bf0d140374c0d7556209d1e.css?body=1" for 127.0.0.1 at 2015-12-01 21:34:14 +0200
+D, [2015-12-01T21:34:15.011173 #4392] DEBUG -- : 
+D, [2015-12-01T21:34:15.011173 #4392] DEBUG -- : 
+I, [2015-12-01T21:34:15.012173 #4392]  INFO -- : Started GET "/assets/application.self-d885a0a66bd595c10edb24f8879f94e334d88be0730c4d7c7a7b57c731c09037.css?body=1" for 127.0.0.1 at 2015-12-01 21:34:15 +0200
+D, [2015-12-01T21:34:15.053176 #4392] DEBUG -- : 
+D, [2015-12-01T21:34:15.054176 #4392] DEBUG -- : 
+I, [2015-12-01T21:34:15.055176 #4392]  INFO -- : Started GET "/assets/templatemo-style.self-1c2364f0684e185fe66d47f93573bf91a3054a824899fa9d5fc659fae5f4d35e.css?body=1" for 127.0.0.1 at 2015-12-01 21:34:15 +0200
+D, [2015-12-01T21:34:15.096178 #4392] DEBUG -- : 
+D, [2015-12-01T21:34:15.096178 #4392] DEBUG -- : 
+I, [2015-12-01T21:34:15.097178 #4392]  INFO -- : Started GET "/assets/custom.self-a36c931221df00df7ed7c2791f9652528ac6e5966284b56a5560d517dbb9c866.css?body=1" for 127.0.0.1 at 2015-12-01 21:34:15 +0200
+D, [2015-12-01T21:34:15.148181 #4392] DEBUG -- : 
+D, [2015-12-01T21:34:15.148181 #4392] DEBUG -- : 
+I, [2015-12-01T21:34:15.148181 #4392]  INFO -- : Started GET "/assets/bootstrap.min.self-2c354d7c0179bd35563b93633b23ac5fb07c67d531d40a75695bacbd0eadb799.css?body=1" for 127.0.0.1 at 2015-12-01 21:34:15 +0200
+D, [2015-12-01T21:34:15.187183 #4392] DEBUG -- : 
+D, [2015-12-01T21:34:15.188183 #4392] DEBUG -- : 
+I, [2015-12-01T21:34:15.189183 #4392]  INFO -- : Started GET "/assets/jquery.self-11cf16f9fa47f38ff39b9db8c53ebbeba67b045f87f6bfdb655cc618bcf31445.js?body=1" for 127.0.0.1 at 2015-12-01 21:34:15 +0200
+D, [2015-12-01T21:34:15.231186 #4392] DEBUG -- : 
+D, [2015-12-01T21:34:15.232186 #4392] DEBUG -- : 
+I, [2015-12-01T21:34:15.247187 #4392]  INFO -- : Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 127.0.0.1 at 2015-12-01 21:34:15 +0200
+D, [2015-12-01T21:34:15.302190 #4392] DEBUG -- : 
+D, [2015-12-01T21:34:15.303190 #4392] DEBUG -- : 
+I, [2015-12-01T21:34:15.304190 #4392]  INFO -- : Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2015-12-01 21:34:15 +0200
+D, [2015-12-01T21:34:15.357193 #4392] DEBUG -- : 
+D, [2015-12-01T21:34:15.358193 #4392] DEBUG -- : 
+I, [2015-12-01T21:34:15.359193 #4392]  INFO -- : Started GET "/assets/bootstrap.min.self-d66e555f160df017adf1ca16a36cd609a36d49c51637e365c5b8847d0065fa40.js?body=1" for 127.0.0.1 at 2015-12-01 21:34:15 +0200
+D, [2015-12-01T21:34:15.408196 #4392] DEBUG -- : 
+D, [2015-12-01T21:34:15.408196 #4392] DEBUG -- : 
+I, [2015-12-01T21:34:15.415196 #4392]  INFO -- : Started GET "/assets/custom.self-9c139bdd65ff37be69a29622aeb1af5d9290586f26c6687132d456bb2661537a.js?body=1" for 127.0.0.1 at 2015-12-01 21:34:15 +0200
+D, [2015-12-01T21:34:15.460199 #4392] DEBUG -- : 
+D, [2015-12-01T21:34:15.461199 #4392] DEBUG -- : 
+I, [2015-12-01T21:34:15.461199 #4392]  INFO -- : Started GET "/assets/jquery.singlePageNav.min.self-847e8c0c75aa355d21bee961f4d2a2f7d5358b7fb4ff368642f66ded542af090.js?body=1" for 127.0.0.1 at 2015-12-01 21:34:15 +0200
+D, [2015-12-01T21:34:15.520202 #4392] DEBUG -- : 
+D, [2015-12-01T21:34:15.520202 #4392] DEBUG -- : 
+I, [2015-12-01T21:34:15.520202 #4392]  INFO -- : Started GET "/assets/wow.min.self-a562747182e965d7399b4fd740fcd8cff702334db5b9614833f9b927be2a81ed.js?body=1" for 127.0.0.1 at 2015-12-01 21:34:15 +0200
+D, [2015-12-01T21:34:15.561205 #4392] DEBUG -- : 
+D, [2015-12-01T21:34:15.562205 #4392] DEBUG -- : 
+I, [2015-12-01T21:34:15.567205 #4392]  INFO -- : Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2015-12-01 21:34:15 +0200
+D, [2015-12-01T21:34:15.624208 #4392] DEBUG -- : 
+D, [2015-12-01T21:34:15.624208 #4392] DEBUG -- : 
+I, [2015-12-01T21:34:15.625208 #4392]  INFO -- : Started GET "/assets/jquery.min.map" for 127.0.0.1 at 2015-12-01 21:34:15 +0200
+D, [2015-12-01T21:34:15.866222 #4392] DEBUG -- : 
+D, [2015-12-01T21:34:15.866222 #4392] DEBUG -- : 
+I, [2015-12-01T21:34:15.866222 #4392]  INFO -- : Started GET "/assets/software-img.png" for 127.0.0.1 at 2015-12-01 21:34:15 +0200
+D, [2015-12-01T21:34:15.916225 #4392] DEBUG -- : 
+D, [2015-12-01T21:34:15.916225 #4392] DEBUG -- : 
+I, [2015-12-01T21:34:15.916225 #4392]  INFO -- : Started GET "/assets/contact-map.jpg" for 127.0.0.1 at 2015-12-01 21:34:15 +0200
+D, [2015-12-01T21:34:16.148238 #4392] DEBUG -- : 
+D, [2015-12-01T21:34:16.148238 #4392] DEBUG -- : 
+I, [2015-12-01T21:34:16.151238 #4392]  INFO -- : Started GET "/assets/home-bg.jpg" for 127.0.0.1 at 2015-12-01 21:34:16 +0200
+D, [2015-12-01T21:34:16.195241 #4392] DEBUG -- : 
+D, [2015-12-01T21:34:16.195241 #4392] DEBUG -- : 
+I, [2015-12-01T21:34:16.195241 #4392]  INFO -- : Started GET "/assets/contact-bg.jpg" for 127.0.0.1 at 2015-12-01 21:34:16 +0200
+D, [2015-12-01T21:34:25.166754 #4392] DEBUG -- : 
+D, [2015-12-01T21:34:25.166754 #4392] DEBUG -- : 
+I, [2015-12-01T21:34:25.167754 #4392]  INFO -- : Started DELETE "/users/sign_out" for 127.0.0.1 at 2015-12-01 21:34:25 +0200
+I, [2015-12-01T21:34:25.239758 #4392]  INFO -- : Processing by SessionsController#destroy as HTML
+I, [2015-12-01T21:34:25.240758 #4392]  INFO -- :   Parameters: {"authenticity_token"=>"vPejLLOFFS4O/SjeNR+pyXrMQ1j42A4MJVL13liUKEE2wfp0du5WWPc6YkDqgVD+X7zHA2ASOOHzvLJtuOpBlw=="}
+D, [2015-12-01T21:34:25.245758 #4392] DEBUG -- :   [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 26]]
+D, [2015-12-01T21:34:25.262759 #4392] DEBUG -- :   [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+D, [2015-12-01T21:34:25.264760 #4392] DEBUG -- :   [1m[35m (0.0ms)[0m  commit transaction
+I, [2015-12-01T21:34:25.266760 #4392]  INFO -- : Redirected to http://localhost:3000/
+I, [2015-12-01T21:34:25.267760 #4392]  INFO -- : Completed 302 Found in 27ms (ActiveRecord: 1.0ms)
+D, [2015-12-01T21:34:25.293761 #4392] DEBUG -- : 
+D, [2015-12-01T21:34:25.293761 #4392] DEBUG -- : 
+I, [2015-12-01T21:34:25.294761 #4392]  INFO -- : Started GET "/" for 127.0.0.1 at 2015-12-01 21:34:25 +0200
+I, [2015-12-01T21:34:25.342764 #4392]  INFO -- : Processing by ApplicationController#index as HTML
+I, [2015-12-01T21:34:25.397767 #4392]  INFO -- :   Rendered pages/_country_select.html.erb (0.0ms)
+I, [2015-12-01T21:34:25.399767 #4392]  INFO -- :   Rendered pages/home.html.erb within layouts/application (39.0ms)
+I, [2015-12-01T21:34:25.519774 #4392]  INFO -- : Completed 200 OK in 177ms (Views: 173.6ms | ActiveRecord: 2.0ms)
+D, [2015-12-01T21:34:25.722786 #4392] DEBUG -- : 
+D, [2015-12-01T21:34:25.723786 #4392] DEBUG -- : 
+I, [2015-12-01T21:34:25.736787 #4392]  INFO -- : Started GET "/assets/font-awesome.self-be09f9a5a5e8fd15a4e4d68dc8509252a33dc056003e53159586cf99368ba0e7.css?body=1" for 127.0.0.1 at 2015-12-01 21:34:25 +0200
+D, [2015-12-01T21:34:25.813791 #4392] DEBUG -- : 
+D, [2015-12-01T21:34:25.814791 #4392] DEBUG -- : 
+I, [2015-12-01T21:34:25.814791 #4392]  INFO -- : Started GET "/assets/application.self-d885a0a66bd595c10edb24f8879f94e334d88be0730c4d7c7a7b57c731c09037.css?body=1" for 127.0.0.1 at 2015-12-01 21:34:25 +0200
+D, [2015-12-01T21:34:25.860794 #4392] DEBUG -- : 
+D, [2015-12-01T21:34:25.860794 #4392] DEBUG -- : 
+I, [2015-12-01T21:34:25.867794 #4392]  INFO -- : Started GET "/assets/custom.self-a36c931221df00df7ed7c2791f9652528ac6e5966284b56a5560d517dbb9c866.css?body=1" for 127.0.0.1 at 2015-12-01 21:34:25 +0200
+D, [2015-12-01T21:34:25.908796 #4392] DEBUG -- : 
+D, [2015-12-01T21:34:25.909796 #4392] DEBUG -- : 
+I, [2015-12-01T21:34:25.910797 #4392]  INFO -- : Started GET "/assets/animate.min.self-0c3f9476f6e414f4c45f1792970e5960851067af8bf0d140374c0d7556209d1e.css?body=1" for 127.0.0.1 at 2015-12-01 21:34:25 +0200
+D, [2015-12-01T21:34:25.964800 #4392] DEBUG -- : 
+D, [2015-12-01T21:34:25.965800 #4392] DEBUG -- : 
+I, [2015-12-01T21:34:25.965800 #4392]  INFO -- : Started GET "/assets/bootstrap.min.self-2c354d7c0179bd35563b93633b23ac5fb07c67d531d40a75695bacbd0eadb799.css?body=1" for 127.0.0.1 at 2015-12-01 21:34:25 +0200
+D, [2015-12-01T21:34:26.036804 #4392] DEBUG -- : 
+D, [2015-12-01T21:34:26.037804 #4392] DEBUG -- : 
+I, [2015-12-01T21:34:26.039804 #4392]  INFO -- : Started GET "/assets/templatemo-style.self-1c2364f0684e185fe66d47f93573bf91a3054a824899fa9d5fc659fae5f4d35e.css?body=1" for 127.0.0.1 at 2015-12-01 21:34:26 +0200
+D, [2015-12-01T21:34:26.080806 #4392] DEBUG -- : 
+D, [2015-12-01T21:34:26.080806 #4392] DEBUG -- : 
+I, [2015-12-01T21:34:26.081806 #4392]  INFO -- : Started GET "/assets/jquery.self-11cf16f9fa47f38ff39b9db8c53ebbeba67b045f87f6bfdb655cc618bcf31445.js?body=1" for 127.0.0.1 at 2015-12-01 21:34:26 +0200
+D, [2015-12-01T21:34:26.122809 #4392] DEBUG -- : 
+D, [2015-12-01T21:34:26.123809 #4392] DEBUG -- : 
+I, [2015-12-01T21:34:26.124809 #4392]  INFO -- : Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 127.0.0.1 at 2015-12-01 21:34:26 +0200
+D, [2015-12-01T21:34:26.183812 #4392] DEBUG -- : 
+D, [2015-12-01T21:34:26.184812 #4392] DEBUG -- : 
+I, [2015-12-01T21:34:26.185812 #4392]  INFO -- : Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2015-12-01 21:34:26 +0200
+D, [2015-12-01T21:34:26.231815 #4392] DEBUG -- : 
+D, [2015-12-01T21:34:26.231815 #4392] DEBUG -- : 
+I, [2015-12-01T21:34:26.232815 #4392]  INFO -- : Started GET "/assets/bootstrap.min.self-d66e555f160df017adf1ca16a36cd609a36d49c51637e365c5b8847d0065fa40.js?body=1" for 127.0.0.1 at 2015-12-01 21:34:26 +0200
+D, [2015-12-01T21:34:26.288818 #4392] DEBUG -- : 
+D, [2015-12-01T21:34:26.288818 #4392] DEBUG -- : 
+I, [2015-12-01T21:34:26.289818 #4392]  INFO -- : Started GET "/assets/custom.self-9c139bdd65ff37be69a29622aeb1af5d9290586f26c6687132d456bb2661537a.js?body=1" for 127.0.0.1 at 2015-12-01 21:34:26 +0200
+D, [2015-12-01T21:34:26.333821 #4392] DEBUG -- : 
+D, [2015-12-01T21:34:26.334821 #4392] DEBUG -- : 
+I, [2015-12-01T21:34:26.335821 #4392]  INFO -- : Started GET "/assets/jquery.singlePageNav.min.self-847e8c0c75aa355d21bee961f4d2a2f7d5358b7fb4ff368642f66ded542af090.js?body=1" for 127.0.0.1 at 2015-12-01 21:34:26 +0200
+D, [2015-12-01T21:34:26.391824 #4392] DEBUG -- : 
+D, [2015-12-01T21:34:26.391824 #4392] DEBUG -- : 
+I, [2015-12-01T21:34:26.391824 #4392]  INFO -- : Started GET "/assets/wow.min.self-a562747182e965d7399b4fd740fcd8cff702334db5b9614833f9b927be2a81ed.js?body=1" for 127.0.0.1 at 2015-12-01 21:34:26 +0200
+D, [2015-12-01T21:34:26.445827 #4392] DEBUG -- : 
+D, [2015-12-01T21:34:26.447827 #4392] DEBUG -- : 
+I, [2015-12-01T21:34:26.460828 #4392]  INFO -- : Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2015-12-01 21:34:26 +0200
+D, [2015-12-01T21:34:26.505831 #4392] DEBUG -- : 
+D, [2015-12-01T21:34:26.506831 #4392] DEBUG -- : 
+I, [2015-12-01T21:34:26.519831 #4392]  INFO -- : Started GET "/assets/jquery.min.map" for 127.0.0.1 at 2015-12-01 21:34:26 +0200
+D, [2015-12-01T21:34:26.766845 #4392] DEBUG -- : 
+D, [2015-12-01T21:34:26.767846 #4392] DEBUG -- : 
+I, [2015-12-01T21:34:26.767846 #4392]  INFO -- : Started GET "/assets/software-img.png" for 127.0.0.1 at 2015-12-01 21:34:26 +0200
+D, [2015-12-01T21:34:26.817848 #4392] DEBUG -- : 
+D, [2015-12-01T21:34:26.817848 #4392] DEBUG -- : 
+I, [2015-12-01T21:34:26.817848 #4392]  INFO -- : Started GET "/assets/contact-map.jpg" for 127.0.0.1 at 2015-12-01 21:34:26 +0200
+D, [2015-12-01T21:34:27.060862 #4392] DEBUG -- : 
+D, [2015-12-01T21:34:27.060862 #4392] DEBUG -- : 
+I, [2015-12-01T21:34:27.063862 #4392]  INFO -- : Started GET "/assets/contact-bg.jpg" for 127.0.0.1 at 2015-12-01 21:34:27 +0200
+D, [2015-12-01T21:34:27.101865 #4392] DEBUG -- : 
+D, [2015-12-01T21:34:27.102865 #4392] DEBUG -- : 
+I, [2015-12-01T21:34:27.110865 #4392]  INFO -- : Started GET "/assets/home-bg.jpg" for 127.0.0.1 at 2015-12-01 21:34:27 +0200
+D, [2015-12-01T21:35:16.588695 #4392] DEBUG -- : 
+D, [2015-12-01T21:35:16.588695 #4392] DEBUG -- : 
+I, [2015-12-01T21:35:16.589695 #4392]  INFO -- : Started GET "/" for 127.0.0.1 at 2015-12-01 21:35:16 +0200
+I, [2015-12-01T21:35:16.652699 #4392]  INFO -- : Processing by ApplicationController#index as HTML
+I, [2015-12-01T21:35:16.704702 #4392]  INFO -- :   Rendered pages/_country_select.html.erb (0.0ms)
+I, [2015-12-01T21:35:16.706702 #4392]  INFO -- :   Rendered pages/home.html.erb within layouts/application (37.0ms)
+I, [2015-12-01T21:35:16.844710 #4392]  INFO -- : Completed 200 OK in 192ms (Views: 189.9ms | ActiveRecord: 1.0ms)
+D, [2015-12-01T21:35:17.063722 #4392] DEBUG -- : 
+D, [2015-12-01T21:35:17.065722 #4392] DEBUG -- : 
+I, [2015-12-01T21:35:17.066722 #4392]  INFO -- : Started GET "/assets/font-awesome.self-be09f9a5a5e8fd15a4e4d68dc8509252a33dc056003e53159586cf99368ba0e7.css?body=1" for 127.0.0.1 at 2015-12-01 21:35:17 +0200
+D, [2015-12-01T21:35:17.131726 #4392] DEBUG -- : 
+D, [2015-12-01T21:35:17.135726 #4392] DEBUG -- : 
+I, [2015-12-01T21:35:17.135726 #4392]  INFO -- : Started GET "/assets/animate.min.self-0c3f9476f6e414f4c45f1792970e5960851067af8bf0d140374c0d7556209d1e.css?body=1" for 127.0.0.1 at 2015-12-01 21:35:17 +0200
+D, [2015-12-01T21:35:17.179729 #4392] DEBUG -- : 
+D, [2015-12-01T21:35:17.180729 #4392] DEBUG -- : 
+I, [2015-12-01T21:35:17.181729 #4392]  INFO -- : Started GET "/assets/bootstrap.min.self-2c354d7c0179bd35563b93633b23ac5fb07c67d531d40a75695bacbd0eadb799.css?body=1" for 127.0.0.1 at 2015-12-01 21:35:17 +0200
+D, [2015-12-01T21:35:17.236732 #4392] DEBUG -- : 
+D, [2015-12-01T21:35:17.237732 #4392] DEBUG -- : 
+I, [2015-12-01T21:35:17.252733 #4392]  INFO -- : Started GET "/assets/custom.self-a36c931221df00df7ed7c2791f9652528ac6e5966284b56a5560d517dbb9c866.css?body=1" for 127.0.0.1 at 2015-12-01 21:35:17 +0200
+D, [2015-12-01T21:35:17.291735 #4392] DEBUG -- : 
+D, [2015-12-01T21:35:17.291735 #4392] DEBUG -- : 
+I, [2015-12-01T21:35:17.292735 #4392]  INFO -- : Started GET "/assets/templatemo-style.self-1c2364f0684e185fe66d47f93573bf91a3054a824899fa9d5fc659fae5f4d35e.css?body=1" for 127.0.0.1 at 2015-12-01 21:35:17 +0200
+D, [2015-12-01T21:35:17.333738 #4392] DEBUG -- : 
+D, [2015-12-01T21:35:17.333738 #4392] DEBUG -- : 
+I, [2015-12-01T21:35:17.334738 #4392]  INFO -- : Started GET "/assets/application.self-d885a0a66bd595c10edb24f8879f94e334d88be0730c4d7c7a7b57c731c09037.css?body=1" for 127.0.0.1 at 2015-12-01 21:35:17 +0200
+D, [2015-12-01T21:35:17.381741 #4392] DEBUG -- : 
+D, [2015-12-01T21:35:17.381741 #4392] DEBUG -- : 
+I, [2015-12-01T21:35:17.382741 #4392]  INFO -- : Started GET "/assets/jquery.singlePageNav.min.self-847e8c0c75aa355d21bee961f4d2a2f7d5358b7fb4ff368642f66ded542af090.js?body=1" for 127.0.0.1 at 2015-12-01 21:35:17 +0200
+D, [2015-12-01T21:35:17.420743 #4392] DEBUG -- : 
+D, [2015-12-01T21:35:17.425743 #4392] DEBUG -- : 
+I, [2015-12-01T21:35:17.428743 #4392]  INFO -- : Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 127.0.0.1 at 2015-12-01 21:35:17 +0200
+D, [2015-12-01T21:35:17.467745 #4392] DEBUG -- : 
+D, [2015-12-01T21:35:17.468745 #4392] DEBUG -- : 
+I, [2015-12-01T21:35:17.469746 #4392]  INFO -- : Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2015-12-01 21:35:17 +0200
+D, [2015-12-01T21:35:17.517748 #4392] DEBUG -- : 
+D, [2015-12-01T21:35:17.517748 #4392] DEBUG -- : 
+I, [2015-12-01T21:35:17.519748 #4392]  INFO -- : Started GET "/assets/bootstrap.min.self-d66e555f160df017adf1ca16a36cd609a36d49c51637e365c5b8847d0065fa40.js?body=1" for 127.0.0.1 at 2015-12-01 21:35:17 +0200
+D, [2015-12-01T21:35:17.573751 #4392] DEBUG -- : 
+D, [2015-12-01T21:35:17.574752 #4392] DEBUG -- : 
+I, [2015-12-01T21:35:17.576752 #4392]  INFO -- : Started GET "/assets/custom.self-9c139bdd65ff37be69a29622aeb1af5d9290586f26c6687132d456bb2661537a.js?body=1" for 127.0.0.1 at 2015-12-01 21:35:17 +0200
+D, [2015-12-01T21:35:17.618754 #4392] DEBUG -- : 
+D, [2015-12-01T21:35:17.619754 #4392] DEBUG -- : 
+I, [2015-12-01T21:35:17.619754 #4392]  INFO -- : Started GET "/assets/jquery.self-11cf16f9fa47f38ff39b9db8c53ebbeba67b045f87f6bfdb655cc618bcf31445.js?body=1" for 127.0.0.1 at 2015-12-01 21:35:17 +0200
+D, [2015-12-01T21:35:17.662757 #4392] DEBUG -- : 
+D, [2015-12-01T21:35:17.663757 #4392] DEBUG -- : 
+I, [2015-12-01T21:35:17.663757 #4392]  INFO -- : Started GET "/assets/wow.min.self-a562747182e965d7399b4fd740fcd8cff702334db5b9614833f9b927be2a81ed.js?body=1" for 127.0.0.1 at 2015-12-01 21:35:17 +0200
+D, [2015-12-01T21:35:17.708759 #4392] DEBUG -- : 
+D, [2015-12-01T21:35:17.708759 #4392] DEBUG -- : 
+I, [2015-12-01T21:35:17.709759 #4392]  INFO -- : Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2015-12-01 21:35:17 +0200
+D, [2015-12-01T21:35:17.760762 #4392] DEBUG -- : 
+D, [2015-12-01T21:35:17.762762 #4392] DEBUG -- : 
+I, [2015-12-01T21:35:17.762762 #4392]  INFO -- : Started GET "/assets/jquery.min.map" for 127.0.0.1 at 2015-12-01 21:35:17 +0200
+D, [2015-12-01T21:35:18.014777 #4392] DEBUG -- : 
+D, [2015-12-01T21:35:18.014777 #4392] DEBUG -- : 
+I, [2015-12-01T21:35:18.014777 #4392]  INFO -- : Started GET "/assets/software-img.png" for 127.0.0.1 at 2015-12-01 21:35:18 +0200
+D, [2015-12-01T21:35:18.059779 #4392] DEBUG -- : 
+D, [2015-12-01T21:35:18.059779 #4392] DEBUG -- : 
+I, [2015-12-01T21:35:18.060779 #4392]  INFO -- : Started GET "/assets/contact-map.jpg" for 127.0.0.1 at 2015-12-01 21:35:18 +0200
+D, [2015-12-01T21:35:18.305793 #4392] DEBUG -- : 
+D, [2015-12-01T21:35:18.305793 #4392] DEBUG -- : 
+I, [2015-12-01T21:35:18.306793 #4392]  INFO -- : Started GET "/assets/home-bg.jpg" for 127.0.0.1 at 2015-12-01 21:35:18 +0200
+D, [2015-12-01T21:35:18.347796 #4392] DEBUG -- : 
+D, [2015-12-01T21:35:18.347796 #4392] DEBUG -- : 
+I, [2015-12-01T21:35:18.347796 #4392]  INFO -- : Started GET "/assets/contact-bg.jpg" for 127.0.0.1 at 2015-12-01 21:35:18 +0200
+D, [2015-12-01T21:35:50.963661 #4392] DEBUG -- : 
+D, [2015-12-01T21:35:50.964661 #4392] DEBUG -- : 
+I, [2015-12-01T21:35:50.964661 #4392]  INFO -- : Started POST "/users" for 127.0.0.1 at 2015-12-01 21:35:50 +0200
+I, [2015-12-01T21:35:51.055667 #4392]  INFO -- : Processing by RegistrationsController#create as HTML
+I, [2015-12-01T21:35:51.056667 #4392]  INFO -- :   Parameters: {"utf8"=>"✓", "authenticity_token"=>"MMLE4mxPoyFWaFhFn4tlzhISFGJiZl9fkvbdJZr4swWtbcg+Hw7FamtAnNcHMmEmu5mrN2fTdnJgOfsjjsaKug==", "user"=>{"name"=>"tanya", "email"=>"tanya@mail.ru", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "location"=>"VN", "about"=>"fff", "remember_me"=>"0"}}
+D, [2015-12-01T21:35:51.058667 #4392] DEBUG -- : Unpermitted parameter: remember_me
+D, [2015-12-01T21:35:51.148672 #4392] DEBUG -- :   [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+D, [2015-12-01T21:35:51.152672 #4392] DEBUG -- :   [1m[35mUser Exists (0.0ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."email" = 'tanya@mail.ru' LIMIT 1
+D, [2015-12-01T21:35:51.155672 #4392] DEBUG -- :   [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+I, [2015-12-01T21:35:51.359684 #4392]  INFO -- :   Rendered D:/Progs/Ruby22-x64/lib/ruby/gems/2.2.0/gems/devise-3.5.2/app/views/devise/shared/_links.html.erb (16.0ms)
+I, [2015-12-01T21:35:51.359684 #4392]  INFO -- :   Rendered D:/Progs/Ruby22-x64/lib/ruby/gems/2.2.0/gems/devise-3.5.2/app/views/devise/registrations/new.html.erb within layouts/application (47.0ms)
+I, [2015-12-01T21:35:51.510693 #4392]  INFO -- : Completed 200 OK in 454ms (Views: 285.8ms | ActiveRecord: 1.0ms)
+D, [2015-12-01T21:35:51.748706 #4392] DEBUG -- : 
+D, [2015-12-01T21:35:51.750706 #4392] DEBUG -- : 
+I, [2015-12-01T21:35:51.763707 #4392]  INFO -- : Started GET "/assets/animate.min.self-0c3f9476f6e414f4c45f1792970e5960851067af8bf0d140374c0d7556209d1e.css?body=1" for 127.0.0.1 at 2015-12-01 21:35:51 +0200
+D, [2015-12-01T21:35:51.810710 #4392] DEBUG -- : 
+D, [2015-12-01T21:35:51.823710 #4392] DEBUG -- : 
+I, [2015-12-01T21:35:51.826711 #4392]  INFO -- : Started GET "/assets/font-awesome.self-be09f9a5a5e8fd15a4e4d68dc8509252a33dc056003e53159586cf99368ba0e7.css?body=1" for 127.0.0.1 at 2015-12-01 21:35:51 +0200
+D, [2015-12-01T21:35:51.885714 #4392] DEBUG -- : 
+D, [2015-12-01T21:35:51.885714 #4392] DEBUG -- : 
+I, [2015-12-01T21:35:51.887714 #4392]  INFO -- : Started GET "/assets/custom.self-a36c931221df00df7ed7c2791f9652528ac6e5966284b56a5560d517dbb9c866.css?body=1" for 127.0.0.1 at 2015-12-01 21:35:51 +0200
+D, [2015-12-01T21:35:51.972719 #4392] DEBUG -- : 
+D, [2015-12-01T21:35:51.972719 #4392] DEBUG -- : 
+I, [2015-12-01T21:35:51.973719 #4392]  INFO -- : Started GET "/assets/templatemo-style.self-1c2364f0684e185fe66d47f93573bf91a3054a824899fa9d5fc659fae5f4d35e.css?body=1" for 127.0.0.1 at 2015-12-01 21:35:51 +0200
+D, [2015-12-01T21:35:52.040723 #4392] DEBUG -- : 
+D, [2015-12-01T21:35:52.041723 #4392] DEBUG -- : 
+I, [2015-12-01T21:35:52.042723 #4392]  INFO -- : Started GET "/assets/bootstrap.min.self-d66e555f160df017adf1ca16a36cd609a36d49c51637e365c5b8847d0065fa40.js?body=1" for 127.0.0.1 at 2015-12-01 21:35:52 +0200
+D, [2015-12-01T21:35:52.108727 #4392] DEBUG -- : 
+D, [2015-12-01T21:35:52.109727 #4392] DEBUG -- : 
+I, [2015-12-01T21:35:52.110727 #4392]  INFO -- : Started GET "/assets/application.self-d885a0a66bd595c10edb24f8879f94e334d88be0730c4d7c7a7b57c731c09037.css?body=1" for 127.0.0.1 at 2015-12-01 21:35:52 +0200
+D, [2015-12-01T21:35:52.176731 #4392] DEBUG -- : 
+D, [2015-12-01T21:35:52.176731 #4392] DEBUG -- : 
+I, [2015-12-01T21:35:52.177731 #4392]  INFO -- : Started GET "/assets/jquery.self-11cf16f9fa47f38ff39b9db8c53ebbeba67b045f87f6bfdb655cc618bcf31445.js?body=1" for 127.0.0.1 at 2015-12-01 21:35:52 +0200
+D, [2015-12-01T21:35:52.223733 #4392] DEBUG -- : 
+D, [2015-12-01T21:35:52.223733 #4392] DEBUG -- : 
+I, [2015-12-01T21:35:52.223733 #4392]  INFO -- : Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 127.0.0.1 at 2015-12-01 21:35:52 +0200
+D, [2015-12-01T21:35:52.269736 #4392] DEBUG -- : 
+D, [2015-12-01T21:35:52.270736 #4392] DEBUG -- : 
+I, [2015-12-01T21:35:52.270736 #4392]  INFO -- : Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2015-12-01 21:35:52 +0200
+D, [2015-12-01T21:35:52.314739 #4392] DEBUG -- : 
+D, [2015-12-01T21:35:52.314739 #4392] DEBUG -- : 
+I, [2015-12-01T21:35:52.316739 #4392]  INFO -- : Started GET "/assets/bootstrap.min.self-2c354d7c0179bd35563b93633b23ac5fb07c67d531d40a75695bacbd0eadb799.css?body=1" for 127.0.0.1 at 2015-12-01 21:35:52 +0200
+D, [2015-12-01T21:35:52.357741 #4392] DEBUG -- : 
+D, [2015-12-01T21:35:52.358741 #4392] DEBUG -- : 
+I, [2015-12-01T21:35:52.362741 #4392]  INFO -- : Started GET "/assets/custom.self-9c139bdd65ff37be69a29622aeb1af5d9290586f26c6687132d456bb2661537a.js?body=1" for 127.0.0.1 at 2015-12-01 21:35:52 +0200
+D, [2015-12-01T21:35:52.406744 #4392] DEBUG -- : 
+D, [2015-12-01T21:35:52.407744 #4392] DEBUG -- : 
+I, [2015-12-01T21:35:52.407744 #4392]  INFO -- : Started GET "/assets/jquery.singlePageNav.min.self-847e8c0c75aa355d21bee961f4d2a2f7d5358b7fb4ff368642f66ded542af090.js?body=1" for 127.0.0.1 at 2015-12-01 21:35:52 +0200
+D, [2015-12-01T21:35:52.452746 #4392] DEBUG -- : 
+D, [2015-12-01T21:35:52.452746 #4392] DEBUG -- : 
+I, [2015-12-01T21:35:52.454747 #4392]  INFO -- : Started GET "/assets/wow.min.self-a562747182e965d7399b4fd740fcd8cff702334db5b9614833f9b927be2a81ed.js?body=1" for 127.0.0.1 at 2015-12-01 21:35:52 +0200
+D, [2015-12-01T21:35:52.496749 #4392] DEBUG -- : 
+D, [2015-12-01T21:35:52.496749 #4392] DEBUG -- : 
+I, [2015-12-01T21:35:52.497749 #4392]  INFO -- : Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2015-12-01 21:35:52 +0200
+D, [2015-12-01T21:35:52.556752 #4392] DEBUG -- : 
+D, [2015-12-01T21:35:52.556752 #4392] DEBUG -- : 
+I, [2015-12-01T21:35:52.558753 #4392]  INFO -- : Started GET "/assets/jquery.min.map" for 127.0.0.1 at 2015-12-01 21:35:52 +0200
