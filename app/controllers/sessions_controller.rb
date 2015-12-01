@@ -1,19 +1,28 @@
 class SessionsController < Devise::SessionsController
+  #layout "application"
   respond_to :html, :json
-  clear_respond_to
+  #clear_respond_to
   def create
-    #raise "stop"
-    self.resource = warden.authenticate!(auth_options)
-
-    set_flash_message(:notice, :signed_in) if is_flashing_format?
-    sign_in(:user, resource)
-    #yield resource if block_given?
-    #respond_with resource, location: after_sign_in_path_for(resource)
-    redirect_to root_url
+  #  #
+  ###self.resource = warden.authenticate!(auth_options)
+   #raise "stop"
+   warden.authenticate!(:scope => :user, :recall => "#{controller_path}#failure")
+   #render :status => 200, :json => { :success => true, :info => "Logged in", :user => current_user }
+  #  set_flash_message(:notice, :signed_in) if is_flashing_format?
+  #  sign_in(:user, resource)
+  #  #yield resource if block_given?
+  #  #respond_with resource, location: after_sign_in_path_for(resource)
+  redirect_to root_url
   end
 
-  def sign_up_params
-    ###devise_parameter_sanitizer.sanitize(:sign_up)
+  def failure
+    render :status => 401, :json => { :success => false, :info => "Login Credentials Failed" }
+  end
+
+  protected
+
+  def sign_in_params
+    ###devise_parameter_sanitizer.sanitize(:sign_in)
     params.require(:user).permit(:email, :password, :password_confirmation)
   end
   def after_sign_in_path_for(resource)

@@ -437,24 +437,27 @@
                         <%= form_for(User.new, url: session_path(:user), html:{id: 'sign_in_user'}) do |f| %>
                           <!--<h2 class="form-signin-heading">Please sign in</h2>-->
                           <label class="" for="inputEmail">Email address</label>
-                          <input type="email" autofocus="" required="" placeholder="Email address" class="form-control" id="inputEmail"><br>
+                          <input type="email" autofocus="" required="" placeholder="Email address" class="form-control" id="user_email" name="user[email]"><br>
+                        ><br>
                           <label class="" for="password">Password</label>
-                          <input type="password" required="" placeholder="Password" class="form-control" id="password">
+                          <input type="password" required="" placeholder="Password" class="form-control" id="user_password" name="user[password]">
                           <label class="" for="password_confirmation">Password confirm</label>
-                          <input type="password" required="" placeholder="Password" class="form-control" id="password_confirmation">
+                          <input type="password" required="" placeholder="Password" class="form-control" id="password_confirmation" name="user[password_confirmation]" >
                             <% if Devise.mappings[:user].rememberable? -%>
                             <div>
                               <%= f.check_box :remember_me %>
                               <%= f.label :remember_me %>
                             </div>
-                        <% end -%>
+                           <% end -%>
                           <!--<div class="checkbox">-->
                             <!--<label>-->
                               <!--<input type="checkbox" value="remember-me"> Remember me-->
                             <!--</label>-->
-                          </div>
+
                           <button type="submit" class="btn btn-lg btn-primary btn-block">Login</button>
+                      <% end -%>
                       </div>
+
                       <div class="modal-footer">
 
                       </div>
@@ -481,11 +484,17 @@
 
                           <label class="" for="user_about">Description</label>
                           <input type="text" autofocus="" required="" placeholder="Your short description" class="form-control" id="user_about" name="user[about]"><br>
-                          <div class="checkbox">
-                            <label>
-                              <input type="checkbox" value="remember-me"> Remember me
-                            </label>
-                          </div>
+                            <% if Devise.mappings[:user].rememberable? -%>
+                                <div>
+                                  <%= f.check_box :remember_me %>
+                                  <%= f.label :remember_me %>
+                                </div>
+                            <% end -%>
+                        <!--<div class="checkbox">-->
+                            <!--<label>-->
+                              <!--<input type="checkbox" value="remember-me"> Remember me-->
+                            <!--</label>-->
+                          <!--</div>-->
                           <button type="submit" class="btn btn-lg btn-primary btn-block">Register</button>
                         <% end %>
                       </div>

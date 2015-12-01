@@ -11,7 +11,7 @@ PromoRiyad::Application.routes.draw do
   devise_for :users, controllers: { omniauth_callbacks: "omniauth_callbacks", sessions: 'sessions', registrations: 'registrations' }
 
   devise_scope :user do
-    post "/users/sign_in", to: "sessions#create"
+    ##post "/users/sign_in", to: "sessions#create"
   #  post "/users/register", to: "registrations#create"
     delete "/users/sign_out", to: "sessions#destroy"
   end
