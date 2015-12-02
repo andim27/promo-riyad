@@ -43,4 +43,8 @@ $(function() {
 
         //console.log('showing tab ' + e.relatedTarget); // Previous Tab
     })
+    $('#license-btn').click(function(){
+        $('a[href="#register-block"]').tab('show');
+        $('#license-check').prop('checked', true);
+    })
 })

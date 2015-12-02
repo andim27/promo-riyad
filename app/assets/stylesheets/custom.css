@@ -94,3 +94,10 @@ opacity:0.9;
     text-align: center;
     padding: 10px;
 }
+
+#sign-in-fb {
+
+}
+#sign-in-fb:hover {
+    color: #d9edf7;   /* #afd9ee   #a6e1ec  */
+}

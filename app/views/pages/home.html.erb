@@ -408,8 +408,11 @@
                     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
                     <div class="row text-center">
                       <h3 class="login-title">Site login</h3>
-                      <%= link_to "Sign in with #{'facebook'.to_s.titleize}", omniauth_authorize_path('user', 'facebook') %>
-
+                      <div  class="center-block text-center"  style="width:50%">
+                          <a id="sign-in-fb" class="btn btn-block btn-social btn-facebook" href="<%= omniauth_authorize_path('user', 'facebook') %>">
+                            <span class="fa fa-facebook"></span> Sign in with Facebook
+                          </a>
+                      </div>
                       <!--<button type="button" class="btn btn-primary" onclick="authProvider('facebook')">Facebook</button>-->
                       <!--<button class="btn btn-danger" type="button" onclick="authProvider('google')">Google+</button>-->
                       <!---->
@@ -421,11 +424,14 @@
                   <ul class="nav nav-tabs" role="tablist">
                     <li class="active">
                       <a href="#login-block" role="tab" data-toggle="tab">
-                        <icon class="fa fa-home"></icon> Login
+                        <icon class="fa fa-sign-in"></icon> Login
                       </a>
                     </li>
                     <li><a href="#register-block" role="tab" data-toggle="tab">
                       <i class="fa fa-user"></i> Register
+                    </a>
+                    <li><a href="#license-block" role="tab" data-toggle="tab">
+                      <i class="fa fa-book"></i> License
                     </a>
                     </li>
 
@@ -484,17 +490,17 @@
                             <%= render partial: "pages/country_select" %>
                           <label class="" for="user_about">Description</label>
                           <input type="text" autofocus="" required="" placeholder="Your short description" class="form-control" id="user_about" name="user[about]"><br>
-                            <% if Devise.mappings[:user].rememberable? -%>
-                                <div>
-                                  <%= f.check_box :remember_me %>
-                                  <%= f.label :remember_me %>
-                                </div>
-                            <% end -%>
-                        <!--<div class="checkbox">-->
-                            <!--<label>-->
-                              <!--<input type="checkbox" value="remember-me"> Remember me-->
-                            <!--</label>-->
-                          <!--</div>-->
+                            <!--<% if Devise.mappings[:user].rememberable? -%>-->
+                                <!--<div>-->
+                                  <!--<%= f.check_box :remember_me %>-->
+                                  <!--<%= f.label :remember_me %>-->
+                                <!--</div>-->
+                            <!--<% end -%>-->
+                        <div class="checkbox">
+                            <label>
+                              <input type="checkbox" id='license-check' name="license" value="" checked="false"> I have read license agreement
+                            </label>
+                          </div><br>
                           <button type="submit" class="btn btn-lg btn-primary btn-block">Register</button>
                         <% end %>
                       </div>
@@ -502,7 +508,21 @@
                         <!--<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>-->
                       </div>
                     </div>
+                    <div class="tab-pane fade" id="license-block">
+
+                        <div class="panel-body">
+                          <p>license text</p>
+                          <p>license text</p>
+                          <p>license text</p>
+                          <p>license text</p>
+                          <p>license text</p>
+                          <p>license text</p>
+
+                        </div>
+                        <button id="license-btn" class="btn btn-lg btn-primary btn-block">I have read license</button>
+
                     </div>
+                  </div>
 
                   </div>
 
