@@ -2,33 +2,35 @@ class RegistrationsController < Devise::RegistrationsController
   respond_to :html, :json
   #include DeviseHelper
   #POST /resource
-  #def create
-  #  #build_resource(sign_up_params)
-  #  ###configure_sign_up_params
-  #  #@resource = warden.authenticate!(:scope => :user, :recall => "#{controller_path}#failure")
-  #  #sign_up(resource_name, resource)
-  #  #render :status => 200, :json => { :success => true, :info => "Logged in", :user => current_user }
-  #  #-------------------------------------------------------------------
-  #  build_resource(sign_up_params)
-  #
-  #  resource.save
-  #  yield resource if block_given?
-  #  if resource.persisted?
-  #    if resource.active_for_authentication?
-  #      #set_flash_message :notice, :signed_up if is_flashing_format?
-  #      sign_up(resource_name, resource)
-  #      render :status => 200, :json => { :success => true, :info => "Logged in", :user => current_user }
-  #    else
-  #      set_flash_message :notice, :"signed_up_but_#{resource.inactive_message}" if is_flashing_format?
-  #      expire_data_after_sign_in!
-  #      render :status => 200, :json => { :success => true, :info => "Not active auth", :user => current_user }
-  #    end
-  #  else
-  #    clean_up_passwords resource
-  #    set_minimum_password_length
-  #    respond_with resource
-  #  end
-  #end
+  def create
+    #build_resource(sign_up_params)
+    ###configure_sign_up_params
+    #@resource = warden.authenticate!(:scope => :user, :recall => "#{controller_path}#failure")
+    #sign_up(resource_name, resource)
+    #render :status => 200, :json => { :success => true, :info => "Logged in", :user => current_user }
+    #-------------------------------------------------------------------
+    resource=build_resource(sign_up_params)
+
+    resource.save
+    #render :status => 200, :json => { :success => true, :info => "Register in", :user => current_user }
+    yield resource if block_given?
+    if resource.persisted?
+      if resource.active_for_authentication?
+        #set_flash_message :notice, :signed_up if is_flashing_format?
+        sign_up(resource_name, resource)
+        render :status => 200, :json => { :success => true, :info => "Registered in", :user => current_user, :url_to=>root_url }
+      else
+        #set_flash_message :notice, :"signed_up_but_#{resource.inactive_message}" if is_flashing_format?
+        expire_data_after_sign_in!
+        render :status => 200, :json => { :success => true, :info => "Not active auth", :user => current_user, :url_to=>root_url }
+      end
+    else
+      clean_up_passwords resource
+      set_minimum_password_length
+      #respond_with resource resource.errors.full_messages.first
+      render :status => 401, :json => { :success => false, :info =>resource.errors.full_messages.first}
+    end
+  end
 
   def failure
     #render :status => 401, :json => { :success => false, :info =>devise_error_messages!}

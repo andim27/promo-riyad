@@ -4,6 +4,8 @@ $(window).load(function(){
     if (window.location.hash == "#_=_") {
         window.location.hash = "";
     }
+    $('input[name="authenticity_token"]').val($('meta[name=csrf-token]').attr('content'));
+    //---login--
     $("#sign_in_user").on("ajax:success", function(e, data, status, xhr) {
         $('#success-block').removeClass('hidden').delay( 1500 ).fadeIn( 400 );
         window.location.href=data.url_to
@@ -11,7 +13,15 @@ $(window).load(function(){
         $('#error-block').removeClass('hidden')
         $('#error-block-mes').html(error)
     });
-    $('#user_password, #password_confirmation').on('focus',function (){
+    //---register---
+    $("#sign_up_user").on("ajax:success", function(e, data, status, xhr) {
+        $('#success-block').removeClass('hidden').delay( 1500 ).fadeIn( 400 );
+        window.location.href=data.url_to
+    }).on("ajax:error", function(e, xhr, status, error) {
+        $('#error-block').removeClass('hidden')
+        $('#error-block-mes').html(error+'<p>'+xhr.responseJSON.info+'</p>')
+    });
+    $('#user_email, #user_password, #password_confirmation').on('focus',function (){
         $('#error-block').addClass('hidden')
     })
 

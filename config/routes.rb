@@ -12,7 +12,7 @@ PromoRiyad::Application.routes.draw do
 
   devise_scope :user do
     ##post "/users/sign_in", to: "sessions#create"
-  #  post "/users/register", to: "registrations#create"
+    post "/users/register", to: "registrations#create"
     delete "/users/sign_out", to: "sessions#destroy"
   end
   # The priority is based upon order of creation: first created -> highest priority.
