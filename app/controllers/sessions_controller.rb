@@ -6,17 +6,19 @@ class SessionsController < Devise::SessionsController
   #  #
   ###self.resource = warden.authenticate!(auth_options)
    #raise "stop"
-   warden.authenticate!(:scope => :user, :recall => "#{controller_path}#failure")
-   #render :status => 200, :json => { :success => true, :info => "Logged in", :user => current_user }
+   @resource = warden.authenticate!(:scope => :user, :recall => "#{controller_path}#failure")
+   render :status => 200, :json => { :success => true, :info => "Logged in", :user => current_user,:url_to=>root_url }
   #  set_flash_message(:notice, :signed_in) if is_flashing_format?
   #  sign_in(:user, resource)
   #  #yield resource if block_given?
   #  #respond_with resource, location: after_sign_in_path_for(resource)
-  redirect_to root_url
+  #redirect_to root_url
   end
 
   def failure
-    render :status => 401, :json => { :success => false, :info => "Login Credentials Failed" }
+
+    render :status => 401, :json => { :success => false, :info =>"Login error"}
+    #raise "stop"
   end
 
   protected

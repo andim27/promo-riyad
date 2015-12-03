@@ -76,6 +76,7 @@
                     <% end %>
                     <p class="notice"><%= notice %></p>
                     <p class="alert"><%= alert %></p>
+
                   </div>
 
 					<div class="row">
@@ -413,6 +414,16 @@
                             <span class="fa fa-facebook"></span> Sign in with Facebook
                           </a>
                       </div>
+                      <div class="alert alert-success hidden"  id="success-block">
+                        <!--<a class="close" data-dismiss="alert">×</a>-->
+                        <strong>Success!</strong>You have successfully done it.
+                      </div>
+                      <div class="alert alert-error hidden" id="error-block">
+                        <!--<a class="close" data-dismiss="alert">×</a>-->
+                        <div id="error-block-mes">
+                        <strong>Error!</strong>This is a fatal error.
+                        </div>
+                      </div>
                       <!--<button type="button" class="btn btn-primary" onclick="authProvider('facebook')">Facebook</button>-->
                       <!--<button class="btn btn-danger" type="button" onclick="authProvider('google')">Google+</button>-->
                       <!---->
@@ -440,7 +451,7 @@
                   <div class="tab-content">
                     <div class="tab-pane fade active in" id="login-block">
                       <div class="modal-body">
-                        <%= form_for(User.new, url: session_path(:user), html:{id: 'sign_in_user'}) do |f| %>
+                        <%= form_for(User.new, url: session_path(:user), html:{id: 'sign_in_user'}, remote:true) do |f| %>
                           <!--<h2 class="form-signin-heading">Please sign in</h2>-->
                           <label class="" for="inputEmail">Email address</label>
                           <input type="email" autofocus="" required="" placeholder="Email address" class="form-control" id="user_email" name="user[email]"><br>
